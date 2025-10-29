@@ -1,0 +1,115 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 84px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FDFFE9;
+}
+
+.header_logo{
+    margin-left: 60px;
+}
+
+.header-nav-list{
+    display: flex;
+    margin: 0 58px 0 0; 
+    padding: 0;
+}
+
+.header-nav-list-item{
+    list-style: none;
+    margin-left: 15px;
+}
+
+.header-nav-list-link{
+    display: block;
+    text-decoration: none;
+    color: #E60000;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.banner{
+    width: 100%;
+}
+
+.banner img {
+    display: block; /* 移除圖片底部可能的多餘空間 */
+    width: 100%;    
+    height: auto;   
+}
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 100%;
+    height: auto; 
+    padding: 30px 60px; /* 增加上下和左右的內距，擴大 Footer 區域 */
+    background-color: #FDFFE9;
+}
+
+.footer_left {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.footer_logo img {
+    width: 131px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer_info p {
+    color: #E60000;
+    font-size: 16px; 
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+
+.footer-nav-list {
+    display: flex; 
+    flex-direction: column;
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+    text-align: right; 
+}
+
+.footer-nav-list-item {
+    margin: 0 0 10px 0; 
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav-list-link {
+    color: #E60000;
+    font-weight: 900;
+    font-size: 16px;
+    text-decoration: none;
+}

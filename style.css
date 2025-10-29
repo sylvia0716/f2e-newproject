@@ -19,23 +19,195 @@ html, body {
     height: 84px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #EDF2C5;
+    background-color: #FDFFE9;
 }
 
 .header_logo{
     margin-left: 60px;
 }
 
-.header_btngrp{
+.header-nav-list{
     display: flex;
-    align-items: center;
-    width: 466px;
-    height: 52px;
-    margin-right: 30px;
-    background-color: #97a71d;
+    margin: 0 58px 0 0; 
+    padding: 0;
 }
 
-.header_item{
+.header-nav-list-item{
+    list-style: none;
+    margin-left: 15px;
+}
 
-    margin-left: 40px;
+.header-nav-list-link{
+    display: block;
+    text-decoration: none;
+    color: #E60000;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.banner{
+    width: 100%;
+}
+
+.banner img {
+    display: block; /* 移除圖片底部可能的多餘空間 */
+    width: 100%;    
+    height: auto;   
+}
+
+.block_1 {
+    position: relative; /* 設定為相對定位 */
+    width: 100%;
+    overflow: hidden; /* 確保內容不會溢出 */
+}
+
+.block_1 img {
+    display: block; /* 移除圖片底部可能的多餘空間 */
+    width: 100%;
+    height: 100%;
+
+}
+
+.block_1 p {
+    position: absolute; /* 設定為絕對定位 */
+    top: 30%;           /* 垂直從頂部下移 10% */
+    left: 50%;          /* 水平從左側右移 70% */
+    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
+    color: #E60000; 
+    font-size: 36px; 
+    font-weight: bold;
+    text-align: right;
+    z-index: 10; /* 確保文字層級高於圖片 */
+    width: 80%; /* 讓文字不會貼到邊緣 */
+}
+
+.block_2 {
+    position: relative; /* 設定為相對定位 */
+    width: 100%;
+    overflow: hidden; /* 確保內容不會溢出 */
+}
+
+.block_2 img {
+    display: block; /* 移除圖片底部可能的多餘空間 */
+    width: 100%;
+    height: 100%;
+
+}
+
+.block_2 p {
+    position: absolute; /* 設定為絕對定位 */
+    top: 80%;           /* 垂直從頂部下移 80% */
+    left: 30%;          /* 水平從左側右移 30% */
+    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
+    color: #FFFFFF; 
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10; /* 確保文字層級高於圖片 */
+    width: 80%; /* 讓文字不會貼到邊緣 */
+}
+
+.block_3 {
+    position: relative; /* 設定為相對定位 */
+    width: 100%;
+    overflow: hidden; /* 確保內容不會溢出 */
+}
+
+.block_3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.block_3 p {
+    position: absolute; /* 設定為絕對定位 */
+    top: 50%;           /* 垂直從頂部下移 50% */
+    left: 50%;          /* 水平從左側右移 50% */
+    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10; /* 確保文字層級高於圖片 */
+    width: 80%; /* 讓文字不會貼到邊緣 */
+}
+
+.aboutus{
+    position: relative; /* 設定為相對定位 */
+    width: 100%;
+    overflow: hidden; /* 確保內容不會溢出 */
+}
+
+.aboutus img {
+    display: block;
+    width: 100%;
+    height: 100%; 
+
+}
+
+.aboutus_text {
+    position: absolute; /* 設定為絕對定位 */
+    top: 50%;           /* 垂直從頂部下移 70% */
+    left: 60%;          /* 水平從左側右移 70% */
+    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: right;
+    z-index: 10; /* 確保文字層級高於圖片 */
+    width: 80%; /* 讓文字不會貼到邊緣 */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    width: 100%;
+    height: auto; 
+    padding: 30px 60px; /* 增加上下和左右的內距，擴大 Footer 區域 */
+    background-color: #FDFFE9;
+}
+
+.footer_left {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.footer_logo img {
+    width: 131px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer_info p {
+    color: #E60000;
+    font-size: 16px; 
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+
+.footer-nav-list {
+    display: flex; 
+    flex-direction: column;
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+    text-align: right; 
+}
+
+.footer-nav-list-item {
+    margin: 0 0 10px 0; 
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav-list-link {
+    color: #E60000;
+    font-weight: 900;
+    font-size: 16px;
+    text-decoration: none;
 }

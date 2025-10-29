@@ -2,31 +2,29 @@
 <html>
 
 <head>
-    <img src="" alt="small_logo"><title>販售商品-柑仔影院</title>
+    <title>販售商品-柑仔影院</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="product.css">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="../img/favicon.ico">
 </head>
 
 <body>
     <!--header目錄-->
     <header class="header">
-        <div class="container">
-            <a class="header_logo" href="../index.html"><img src="../img/logo.png" alt="logo_img"></a>
-        </div>
-        <div class="header_btngrp">
-            <a href="../index.html" class="header_item">關於我們</a>
-            <a href="product.html" class="header_item">販售商品</a>
-            <a href="../movie/movie.html" class="header_item">影院資訊</a>
-            <a href="../order/order.html" class="header_item">電影票訂購</a>
-        </div>
+        <a class="header_logo" href="../index.html"><img src="../img/logo.png" alt="logo_img"></a>
+        <ul class="header-nav-list">
+            <li class="header-nav-list-item"><a href="../index.html" class="header-nav-list-link">關於我們</a></li>
+            <li class="header-nav-list-item"><a href="product.html" class="header-nav-list-link">販售商品</a></li>
+            <li class="header-nav-list-item"><a href="../movie/movie.html" class="header-nav-list-link">影院資訊</a></li>
+            <li class="header-nav-list-item"><a href="../order/order.html" class="header-nav-list-link">電影訂票</a></li>
+        </ul>
     </header>
 
     <!--main內容-->
     <main class="main">
         <div class="container">
             <section class="banner">
-                <img src="" alt="P_banner_img"><!--橫幅圖片:販賣商品-->
+                <img src="../img/Frame 8 (5).png" alt="P_banner_img"><!--橫幅圖片:販賣商品-->
             </section>
             <section class="content">
                 <div class="row_1">
@@ -76,18 +74,21 @@
     </main>
 
     <!--footer目錄-->
-    <footer class="footer">
-        <a class="footer_logo" href="../index.html"><img src="../img/logo.png" alt="logo_img"></a>
-        <div class="footer_info">
-            <p>地址：臺北市大安區和平東路2段134號</p>
-            <p>電話：02-2732-1104</p>
+    <footer class="footer"><!--footer目錄-->
+        <div class="footer_left">
+            <a class="footer_logo" href="index.html"><img src="../img/logo.png" alt="logo_img"></a>
+            <div class="footer_info">
+                <p>地址：臺北市大安區和平東路2段134號</p>
+                <p>電話：02-2732-1104</p>
+            </div>
         </div>
-        <div class="footer_links">
-            <a href="../index.html" class="footer_item">關於我們</a>
-            <a href="product.html" class="footer_item">販售商品</a>
-            <a href="../movie/movie.html" class="footer_item">影院資訊</a>
-            <a href="../order/order.html" class="footer_item">電影票訂購</a>
-        </div>
+
+        <ul class="footer-nav-list">
+            <li class="footer-nav-list-item"><a href="index.html" class="footer-nav-list-link">關於我們</a></li>
+            <li class="footer-nav-list-item"><a href="product/product.html" class="footer-nav-list-link">販售商品</a></li>
+            <li class="footer-nav-list-item"><a href="movie/movie.html" class="footer-nav-list-link">影院資訊</a></li>
+            <li class="footer-nav-list-item"><a href="order/order.html" class="footer-nav-list-link">電影訂票</a></li>
+        </ul>
     </footer>
 
 </body>
