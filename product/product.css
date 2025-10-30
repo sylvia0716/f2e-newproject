@@ -57,7 +57,39 @@ html, body {
 }
 
 
+/* 商品區塊 */
+.product-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 0;
+}
 
+.product-row.gray {
+  background-color: #EDEDED;
+}
+
+.product-row.white {
+  background-color: #FFFFFF;
+}
+
+.product-card {
+  width: 180px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card p {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
 
 
 
