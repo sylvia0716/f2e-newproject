@@ -4,7 +4,6 @@
 <head>
     <title>電影票訂購-柑仔影院</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="order.css">
     <link rel="icon" href="/img/favicon.ico">
     <!--bookstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,6 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
+    <!--css-->
+    <link rel="stylesheet" href="order.css">
 
 <body>
     <!--header目錄-->
@@ -43,41 +44,47 @@
                 <img src="../img/Frame 8 (1).png" alt="ordermovie_img">
             </div>
         </section>
-        
-        <form><!--訂購表單-->
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">訂購人姓名</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">訂購人電話</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">訂購人Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">電影日期</label><br>
-                <input type="date" id="date" name="date" required="">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">訂購票卷數量</label>
-                <div class="input-group">
 
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <span class="input-group-text">張</span>
+        <div class="orderform">
+            <form><!--訂購表單-->
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">訂購人姓名</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        required oninvalid="this.setCustomValidity('請輸入有效的姓名')"
+                        oninput="this.setCustomValidity('')">
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">訂購人電話</label>
+                    <input type="tel" class="form-control" id="exampleInputEmail1" required oninvalid="this.setCustomValidity('請輸入有效的電話號碼 ex. 0912345678')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">訂購人Email</label>
+                    <input type="email" id="buyerEmail" name="buyerEmail"  required oninvalid="this.setCustomValidity('請輸入有效的Email ex. example@gmail.com')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">電影日期</label><br>
+                    <input type="date" id="date" name="date" required oninvalid="this.setCustomValidity('請選擇有效的日期')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">訂購票卷數量</label>
+                    <div class="input-group">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>選擇張數</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <span class="input-group-text">張</span>
+                    </div>
+                </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </main>
 
     <footer class="footer"><!--footer目錄-->

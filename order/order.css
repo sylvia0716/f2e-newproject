@@ -11,7 +11,6 @@ html, body {
     padding: 0;
 }
 
-
 .header{
     display: flex;
     justify-content: space-between;
@@ -57,10 +56,109 @@ html, body {
     height: auto;   
 }
 
+.block_1 {
+    position: relative; /* 設定為相對定位 */
+    width: 100%;
+    overflow: hidden; /* 確保內容不會溢出 */
+}
+
+.block_1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.block_1 p {
+    position: absolute; /* 設定為絕對定位 */
+    top: 50%;           /* 垂直從頂部下移 50% */
+    left: 50%;          /* 水平從左側右移 50% */
+    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10; /* 確保文字層級高於圖片 */
+    width: 80%; /* 讓文字不會貼到邊緣 */
+}
 
 
+.orderform {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 984px;
+    height: 1090px;
+    background-color: #e6e6e6; /* 深灰色背景 */
+    border-radius: 15px;
+    margin: 80px auto; /* 置中 */
+    padding: 50px 70px;
+}
 
+.mb-3 {
+    margin-bottom: 60px !important; /*css蓋過bookstrap*/
+}
 
+/* 標籤文字 */
+.form-label {
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* 輸入框統一樣式 */
+.orderform input[type="text"],
+.orderform input[type="email"],
+.orderform input[type="tel"],
+.orderform input[type="date"],
+.orderform select {
+    width: 100%;
+    height: 55px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* 日期欄位特別樣式 */
+.orderform input[type="date"] {
+    width: auto;
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 900;
+}
+
+/* 下拉選單與張數顯示 */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.orderform .input-group select {
+    flex: 1;
+}
+
+.orderform .input-group .input-group-text {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/* 按鈕樣式 */
+.orderform .btn {
+    width: 100%;
+    height: 55px;
+    border-radius: 15px;
+    background-color: #E60000;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+}
 
 .footer {
     display: flex;
