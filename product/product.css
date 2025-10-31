@@ -57,38 +57,47 @@ html, body {
 }
 
 
-/* 商品區塊 */
 .product-row {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 0;
+  align-items: center;
+  gap: 60px;              /* 卡片之間距離 */
+  padding: 80px 0;        /* 上下間距 */
 }
 
 .product-row.gray {
-  background-color: #EDEDED;
+  background-color: #C4C4C4; /* 比 EDEDED 更明顯的灰 */
 }
 
 .product-row.white {
   background-color: #FFFFFF;
 }
 
+/* 單一卡片 */
 .product-card {
-  width: 180px;
+  width: 290px;
+  height: 400px;          /* 圖片 + 文字區的整體高度 */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
+/* 文字在上面 */
 .product-card p {
-  margin-top: 10px;
+  margin: 0 0 10px 0;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   color: #000;
+}
+
+/* 圖片固定大小 */
+.product-card img {
+  width: 290px;
+  height: 341px;
+  object-fit: cover;       /* 確保圖片不變形 */
+  border-radius: 8px;
 }
 
 
