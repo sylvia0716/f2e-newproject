@@ -16,6 +16,11 @@
         crossorigin="anonymous"></script>
     <!--css-->
     <link rel="stylesheet" href="order.css">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet">
+</head>
 
 <body>
     <!--header目錄-->
@@ -50,17 +55,18 @@
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">訂購人姓名</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        required oninvalid="this.setCustomValidity('請輸入有效的姓名')"
-                        oninput="this.setCustomValidity('')">
+                        required oninvalid="this.setCustomValidity('請輸入有效的姓名')" oninput="this.setCustomValidity('')">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">訂購人電話</label>
-                    <input type="tel" class="form-control" id="exampleInputEmail1" required oninvalid="this.setCustomValidity('請輸入有效的電話號碼 ex. 0912345678')"
+                    <input type="tel" class="form-control" id="exampleInputEmail1" required
+                        oninvalid="this.setCustomValidity('請輸入有效的電話號碼 ex. 0912345678')"
                         oninput="this.setCustomValidity('')">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">訂購人Email</label>
-                    <input type="email" id="buyerEmail" name="buyerEmail"  required oninvalid="this.setCustomValidity('請輸入有效的Email ex. example@gmail.com')"
+                    <input type="email" id="buyerEmail" name="buyerEmail" required
+                        oninvalid="this.setCustomValidity('請輸入有效的Email ex. example@gmail.com')"
                         oninput="this.setCustomValidity('')">
                 </div>
                 <div class="mb-3">

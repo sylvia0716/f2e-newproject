@@ -42,9 +42,28 @@ html, body {
     text-decoration: none;
     color: #E60000;
     padding: 10px 20px;
-    font-weight: 900;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-weight: 400;
     font-size: 16px;
 }
+
+/* 導覽列連結一般狀態 */
+.header-nav-list-link {
+  display: block;
+  text-decoration: none;
+  color: #E60000;
+  padding: 10px 20px;
+  font-weight: 900;
+  font-size: 16px;
+  transition: all 0.3s ease; /* 加上過渡動畫，讓放大更順暢 */
+}
+
+/* 滑鼠移上去時放大 */
+.header-nav-list-link:hover {
+  transform: scale(1.2); /* 放大 1.2 倍 */
+  color: #ff3333; /* 可選：變顏色，讓效果更明顯 */
+}
+
 
 .banner{
     width: 100%;
@@ -211,3 +230,4 @@ html, body {
     font-size: 16px;
     text-decoration: none;
 }
+
