@@ -47,7 +47,7 @@
                 <div class="product-content">
                     <img src="../img/P/牙膏巧克力.png" alt="牙膏巧克力">
                     <div class="product-overlay">
-                        <p>擠出來的不是薄荷牙膏，是甜甜巧克力。</p>
+                        <p>擠出來的不是薄荷牙膏，<br>是甜甜巧克力。</p>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                 <div class="product-content">
                     <img src="../img/P/嗶嗶糖.png" alt="嗶嗶糖">
                     <div class="product-overlay">
-                        <p>吃著吃著就覺得吵，但也吃著吃著笑出嗶聲</p>
+                        <p>吃著吃著就覺得吵，<br>但也吃著吃著笑出嗶聲</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                 <div class="product-content">
                     <img src="../img/P/麵茶粉.png" alt="麵茶粉">
                     <div class="product-overlay">
-                        <p>一口濃濃的花生香味，古早味香氣滿分。</p>
+                        <p>一口濃濃的花生香味，<br>古早味香氣滿分。</p>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section class="product-row gray">
@@ -104,7 +103,7 @@
                 <div class="product-content">
                     <img src="../img/P/陀螺.png" alt="陀螺">
                     <div class="product-overlay">
-                        <p>一轉就亮，點亮童年。</p>
+                        <p>一揮就轉，轉動童年。</p>
                     </div>
                 </div>
             </div>
@@ -114,7 +113,7 @@
                 <div class="product-content">
                     <img src="../img/P/劍玉.png" alt="木製玉劍">
                     <div class="product-overlay">
-                        <p>挑戰眼力與協調，一次就上癮的經典玩具。</p>
+                        <p>挑戰眼力與協調，<br>一次就上癮的經典玩具。</p>
                     </div>
                 </div>
             </div>
@@ -132,10 +131,44 @@
         </section>
     </main>
 
+    <!--回到頂部的按鈕-->
+    <button id="backToTopBtn" class="back-to-top-btn" title="回到頂部">
+        ↑
+    </button>
+
+    <script>
+        // 取得按鈕元素
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        // 設定按鈕顯示的滾動距離 (例如：滾動超過 300px 時顯示)
+        const scrollThreshold = 300; 
+        // 函式：偵測滾動，決定按鈕是否顯示
+        function toggleBackToTopButton() {
+            if (window.scrollY > scrollThreshold) {
+                // 滾動超過門檻，顯示按鈕
+                backToTopBtn.classList.add('show');
+            } else {
+                // 否則隱藏按鈕
+                backToTopBtn.classList.remove('show');
+            }
+        }
+        // 函式：點擊按鈕後平滑滾動到頂部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 使用平滑滾動效果
+            });
+        }
+        // 綁定事件監聽器
+        // 1. 頁面滾動時執行偵測函式
+        window.addEventListener('scroll', toggleBackToTopButton);
+        // 2. 按鈕被點擊時執行回頂函式
+        backToTopBtn.addEventListener('click', scrollToTop);
+    </script>
+
     <!--footer目錄-->
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
-            <a class="footer_logo" href="../index.html"><img src="../img/logo.svg" alt="logo_img"></a>
+            <a class="footer_logo" href="../index.html"><img src="../img/logo.png" alt="logo_img"></a>
             <div class="footer_info">
                 <p>地址：臺北市大安區和平東路2段134號</p>
                 <p>電話：02-2732-1104</p>

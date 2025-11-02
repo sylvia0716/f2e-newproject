@@ -11,6 +11,10 @@ html, body {
     padding: 0;
 }
 
+body{
+    font-family: "Chiron GoRound TC", sans-serif;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -175,6 +179,43 @@ html, body {
     font-size: 20px;
     font-weight: 700;
     margin-top: 40px;
+}
+
+/* 回到頂部按鈕的樣式 */
+.back-to-top-btn {
+    /* 固定在視窗右下角 */
+    position: fixed;
+    bottom: 30px; /* 距離底部 30px */
+    right: 30px; /* 距離右側 30px */
+    z-index: 99; /* 確保按鈕在其他元素之上 */
+    
+    /* 外觀設定 */
+    width: 50px;
+    height: 50px;
+    background-color: #E60000; /* 紅色背景 */
+    color: #FDFFE9; /* 淺色文字 */
+    border: none;
+    border-radius: 50%; /* 圓形按鈕 */
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+    /* 預設隱藏並添加平滑過渡 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* 按鈕懸停效果 */
+.back-to-top-btn:hover {
+    background-color: #ff3333;
+}
+
+/* 當按鈕需要顯示時的狀態 */
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .footer {

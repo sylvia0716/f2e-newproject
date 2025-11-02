@@ -42,9 +42,9 @@
 
         <section class="content">
             <div class="block_1"><!--第一塊圖+文-->
-                <p>柑仔影院放映室位於柑仔影院二樓，請於柑仔影院一樓收銀台旁的樓梯進入。<br>
+                <p>柑仔影院位於二樓，請於柑仔影院一樓收銀台旁的樓梯進入。<br>
                     營業時間為：10:00 - 21:00，每週一公休。<br>
-                    購票方式：本院因座位有限因此採線上購票方式購票，購票後請至柑仔影院一樓的收銀台選擇想看的影片及劃位。<br>
+                    購票方式：本院因座位有限因此採線上購票，<br>購票後請至柑仔影院一樓的收銀台選擇想看的影片及劃位。<br>
                     購票資訊：150元/張</p>
                 <img src="../img/main_3.svg" alt="ordermovie_img">
             </div>
@@ -92,6 +92,40 @@
             </form>
         </div>
     </main>
+
+    <!--回到頂部的按鈕-->
+    <button id="backToTopBtn" class="back-to-top-btn" title="回到頂部">
+        ↑
+    </button>
+
+    <script>
+        // 取得按鈕元素
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        // 設定按鈕顯示的滾動距離 (例如：滾動超過 300px 時顯示)
+        const scrollThreshold = 300; 
+        // 函式：偵測滾動，決定按鈕是否顯示
+        function toggleBackToTopButton() {
+            if (window.scrollY > scrollThreshold) {
+                // 滾動超過門檻，顯示按鈕
+                backToTopBtn.classList.add('show');
+            } else {
+                // 否則隱藏按鈕
+                backToTopBtn.classList.remove('show');
+            }
+        }
+        // 函式：點擊按鈕後平滑滾動到頂部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 使用平滑滾動效果
+            });
+        }
+        // 綁定事件監聽器
+        // 1. 頁面滾動時執行偵測函式
+        window.addEventListener('scroll', toggleBackToTopButton);
+        // 2. 按鈕被點擊時執行回頂函式
+        backToTopBtn.addEventListener('click', scrollToTop);
+    </script>
 
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
