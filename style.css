@@ -24,6 +24,7 @@ html, body {
 
 .header_logo{
     margin-left: 60px;
+    margin-top: 10px;
 }
 
 .header-nav-list{
@@ -61,7 +62,7 @@ html, body {
 /* 滑鼠移上去時放大 */
 .header-nav-list-link:hover {
   transform: scale(1.2); /* 放大 1.2 倍 */
-  color: #ff3333; /* 可選：變顏色，讓效果更明顯 */
+  color: #ff3333; /* 變顏色 */
 }
 
 
@@ -116,7 +117,7 @@ html, body {
 
 .block_2 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 80%;           /* 垂直從頂部下移 80% */
+    top: 65%;           /* 垂直從頂部下移 65% */
     left: 30%;          /* 水平從左側右移 30% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #FFFFFF; 
@@ -142,10 +143,10 @@ html, body {
 
 .block_3 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 50%;           /* 垂直從頂部下移 50% */
+    top: 45%;           /* 垂直從頂部下移 45% */
     left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #FFFFFF;
+    color: #E60000;
     font-size: 36px;
     font-weight: bold;
     text-align: center;

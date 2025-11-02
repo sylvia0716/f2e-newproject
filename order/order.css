@@ -91,7 +91,7 @@ html, body {
     top: 50%;           /* 垂直從頂部下移 50% */
     left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #FFFFFF;
+    color: #E60000;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
