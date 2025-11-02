@@ -1,21 +1,24 @@
-html{
+html {
     box-sizing: border-box;
 }
 
-*,*:before,*:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: "Chiron GoRound TC", sans-serif;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,61 +29,58 @@ body{
     background-color: #FDFFE9;
 }
 
-.header_logo{
+.header_logo {
     margin-left: 60px;
 }
 
-.header-nav-list{
+.header-nav-list {
     display: flex;
-    margin: 0 58px 0 0; 
+    margin: 0 58px 0 0;
     padding: 0;
 }
 
-.header-nav-list-item{
+.header-nav-list-item {
     list-style: none;
     margin-left: 15px;
 }
 
-.header-nav-list-link{
+/* 導覽列連結一般狀態 */
+.header-nav-list-link {
     display: block;
     text-decoration: none;
     color: #E60000;
     padding: 10px 20px;
-    font-weight: 900;
-    font-size: 16px;
-}
-
-/* 導覽列連結一般狀態 */
-.header-nav-list-link {
-  display: block;
-  text-decoration: none;
-  color: #E60000;
-  padding: 10px 20px;
-  font-weight: 900;
-  font-size: 16px;
-  transition: all 0.3s ease; /* 加上過渡動畫，讓放大更順暢 */
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    /* 加上過渡動畫，讓放大更順暢 */
 }
 
 /* 滑鼠移上去時放大 */
 .header-nav-list-link:hover {
-  transform: scale(1.2); /* 放大 1.2 倍 */
-  color: #ff3333; /* 變顏色 */
+    transform: scale(1.2);
+    /* 放大 1.2 倍 */
+    color: #ff3333;
+    /* 變顏色 */
 }
 
-.banner{
+.banner {
     width: 100%;
 }
 
 .banner img {
-    display: block; /* 移除圖片底部可能的多餘空間 */
-    width: 100%;    
-    height: auto;   
+    display: block;
+    /* 移除圖片底部可能的多餘空間 */
+    width: 100%;
+    height: auto;
 }
 
 .block_1 {
-    position: relative; /* 設定為相對定位 */
+    position: relative;
+    /* 設定為相對定位 */
     width: 100%;
-    overflow: hidden; /* 確保內容不會溢出 */
+    overflow: hidden;
+    /* 確保內容不會溢出 */
 }
 
 .block_1 img {
@@ -91,16 +91,22 @@ body{
 }
 
 .block_1 p {
-    position: absolute; /* 設定為絕對定位 */
-    top: 50%;           /* 垂直從頂部下移 50% */
-    left: 50%;          /* 水平從左側右移 50% */
-    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
+    position: absolute;
+    /* 設定為絕對定位 */
+    top: 50%;
+    /* 垂直從頂部下移 50% */
+    left: 50%;
+    /* 水平從左側右移 50% */
+    transform: translate(-50%, -50%);
+    /* 將文字自身也位移 50% 以置中 */
     color: #E60000;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
-    z-index: 10; /* 確保文字層級高於圖片 */
-    width: 80%; /* 讓文字不會貼到邊緣 */
+    z-index: 10;
+    /* 確保文字層級高於圖片 */
+    width: 80%;
+    /* 讓文字不會貼到邊緣 */
 }
 
 
@@ -110,14 +116,17 @@ body{
     justify-content: flex-start;
     width: 984px;
     height: 1090px;
-    background-color: #e6e6e6; /* 深灰色背景 */
+    background-color: #e6e6e6;
+    /* 深灰色背景 */
     border-radius: 15px;
-    margin: 80px auto; /* 置中 */
+    margin: 80px auto;
+    /* 置中 */
     padding: 50px 70px;
 }
 
 .mb-3 {
-    margin-bottom: 60px !important; /*css蓋過bookstrap*/
+    margin-bottom: 60px !important;
+    /*css蓋過bookstrap*/
 }
 
 /* 標籤文字 */
@@ -185,22 +194,28 @@ body{
 .back-to-top-btn {
     /* 固定在視窗右下角 */
     position: fixed;
-    bottom: 30px; /* 距離底部 30px */
-    right: 30px; /* 距離右側 30px */
-    z-index: 99; /* 確保按鈕在其他元素之上 */
-    
+    bottom: 30px;
+    /* 距離底部 30px */
+    right: 30px;
+    /* 距離右側 30px */
+    z-index: 99;
+    /* 確保按鈕在其他元素之上 */
+
     /* 外觀設定 */
     width: 50px;
     height: 50px;
-    background-color: #E60000; /* 紅色背景 */
-    color: #FDFFE9; /* 淺色文字 */
+    background-color: #E60000;
+    /* 紅色背景 */
+    color: #FDFFE9;
+    /* 淺色文字 */
     border: none;
-    border-radius: 50%; /* 圓形按鈕 */
+    border-radius: 50%;
+    /* 圓形按鈕 */
     font-size: 24px;
     line-height: 1;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    
+
     /* 預設隱藏並添加平滑過渡 */
     opacity: 0;
     visibility: hidden;
@@ -221,44 +236,45 @@ body{
 .footer {
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
     width: 100%;
-    height: auto; 
-    padding: 30px 60px; /* 增加上下和左右的內距，擴大 Footer 區域 */
+    height: auto;
+    padding: 30px 60px;
+    /* 增加上下和左右的內距，擴大 Footer 區域 */
     background-color: #FDFFE9;
 }
 
 .footer_left {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
 }
 
 .footer_logo img {
-    width: 131px; 
+    width: 131px;
     height: auto;
     margin-bottom: 10px;
 }
 
 .footer_info p {
     color: #E60000;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: 500;
     margin: 5px 0;
 }
 
 
 .footer-nav-list {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     list-style: none;
-    text-align: right; 
+    text-align: right;
 }
 
 .footer-nav-list-item {
-    margin: 0 0 10px 0; 
+    margin: 0 0 10px 0;
     padding: 0;
     list-style: none;
 }

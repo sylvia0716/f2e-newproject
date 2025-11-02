@@ -41,23 +41,14 @@ body{
     margin-left: 15px;
 }
 
-.header-nav-list-link{
-    display: block;
-    text-decoration: none;
-    color: #E60000;
-    padding: 10px 20px;
-    font-weight: 900;
-    font-size: 16px;
-}
-
 /* 導覽列連結一般狀態 */
 .header-nav-list-link {
   display: block;
   text-decoration: none;
   color: #E60000;
   padding: 10px 20px;
-  font-weight: 900;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 18px;
   transition: all 0.3s ease; /* 加上過渡動畫，讓放大更順暢 */
 }
 
