@@ -95,33 +95,45 @@ body{
 }
 
 .container {
-  width: 80%;
+  width: 85%;
   margin: 100px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 60px; /* 各卡片之間的距離 */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 兩欄 */
+  gap: 40px 60px; /* 上下40px、左右60px 間距 */
+  justify-content: center;
+
 }
 
-/* 單一卡片 */
+/* 卡片樣式 */
 .movie-card {
   display: flex;
-  align-items: flex-start;
+  /*align-items: flex-start;*/
+  align-items: flex-start; /* ✅ 改成靠上對齊 */
+  justify-content: flex-start; /* ✅ 內容從左開始排列 */
   background-color: #f2f2f2;
   border-radius: 20px;
-  padding: 40px;
-  gap: 40px;
+  padding: 30px;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 左邊的圖片 */
+/* 滑鼠移上去有輕微浮起效果 */
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 左邊圖片 */
 .movie-card img {
-  width: 288px;
-  height: 413px;
+  width: 150px;
+  height: 210px;
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
-/* 右邊的文字區塊 */
+/* 右邊文字 */
 .movie-text {
   display: flex;
   flex-direction: column;
@@ -129,14 +141,14 @@ body{
 }
 
 .movie-text h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: #000;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .movie-text p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.8;
   color: #000;
   margin: 0;
