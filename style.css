@@ -94,6 +94,7 @@ body{
     text-align: right;
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 80%; /* 讓文字不會貼到邊緣 */
+    line-height: 2;
 }
 
 .block_2 {
@@ -141,7 +142,7 @@ body{
     left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #E60000;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     z-index: 10; /* 確保文字層級高於圖片 */
@@ -164,12 +165,13 @@ body{
 .aboutus_text {
     position: absolute; /* 設定為絕對定位 */
     top: 50%;           /* 垂直從頂部下移 70% */
-    left: 60%;          /* 水平從左側右移 70% */
+    left: 57%;          /* 水平從左側右移 57% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #E60000;
     font-size: 36px;
     font-weight: bold;
     text-align: right;
+    line-height: 2;
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 80%; /* 讓文字不會貼到邊緣 */
 }

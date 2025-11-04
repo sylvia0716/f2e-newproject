@@ -87,7 +87,7 @@ body{
     left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #E60000;
-    font-size: 36px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     z-index: 10; /* 確保文字層級高於圖片 */
@@ -238,7 +238,7 @@ body{
 
 .footer-nav-list-link {
     color: #E60000;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 16px;
     text-decoration: none;
 }

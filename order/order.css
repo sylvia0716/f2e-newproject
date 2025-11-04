@@ -100,7 +100,7 @@ body {
     transform: translate(-50%, -50%);
     /* 將文字自身也位移 50% 以置中 */
     color: #E60000;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
     z-index: 10;
@@ -281,7 +281,7 @@ body {
 
 .footer-nav-list-link {
     color: #E60000;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 16px;
     text-decoration: none;
 }
