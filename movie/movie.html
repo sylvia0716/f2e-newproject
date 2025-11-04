@@ -19,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet">
+    <!--swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="swiper.css" />
 </head>
 
 <body>
@@ -37,13 +40,31 @@
     <!--main內容-->
     <main class="main">
         <section class="banner">
-            <img src="../img/hero.svg" alt="P_banner_img">
+            <img src="../img/hero_movie.svg" alt="P_banner_img">
         </section>
 
-        <section class="banner2">
-            <img src="../img/main_3.svg" alt="P_banner2_img">
-            <div class="banner2_text">
-                <p>上映影片</p>
+        <!-- 電影海報輪播 -->
+        <section class="movie-carousel">
+            <h2 class="carousel-title">上映影片</h2>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide card"><img src="../img/M/美少女戰士.png" alt="電影海報1"></div>
+                    <div class="swiper-slide card"><img src="../img/M/藍色小精靈.png" alt="電影海報2"></div>
+                    <div class="swiper-slide card"><img src="../img/M/小紅豆.png" alt="電影海報3"></div>
+                    <div class="swiper-slide card"><img src="../img/M/北海小英雄.png" alt="電影海報4"></div>
+                    <div class="swiper-slide card"><img src="../img/M/頑皮豹.png" alt="電影海報5"></div>
+                    <div class="swiper-slide card"><img src="../img/M/原子小金剛.png" alt="電影海報6"></div>
+                    <div class="swiper-slide card"><img src="../img/M/鋼彈.png" alt="電影海報7"></div>
+                    <div class="swiper-slide card"><img src="../img/M/米奇.png" alt="電影海報8"></div>
+                </div>
+
+                <!-- Swiper 控制元件（注意：先放在 DOM 裡，下面 JS 會手動綁定） -->
+                <!-- Swiper 控制元件 -->
+                <div class="swiper-button-prev custom-arrow" aria-label="上一張"></div>
+                <div class="swiper-button-next custom-arrow" aria-label="下一張"></div>
+                <div class="swiper-pagination"></div>
+            </div>
             </div>
         </section>
 
@@ -93,7 +114,7 @@
                     <h3>北海小英雄</h3>
                     <p>北歐布蘭村的維京人水手，由黑龍船長帶領出航。<br>
                         而黑龍船長的兒子小威，聰明過人，<br>
-                        常常運用智慧幫助水手們渡過難關。<br> 
+                        常常運用智慧幫助水手們渡過難關。<br>
                         小威只要摸摸鼻子，就能想出怪點子。<br>
                         快跟著他們一起出航吧。</p>
                 </div>
@@ -102,13 +123,35 @@
             <div class="movie-card">
                 <img src="../img/M/頑皮豹.png" alt="頑皮豹">
                 <div class="movie-text">
-                    <h3>頑皮豹</h3> 
+                    <h3>頑皮豹</h3>
                     <p>頑皮豹是一隻高雅、沉著、有著紳士風範的粉紅豹。<br>
-                       大鼻子先生經常是頑皮豹的鄰居或對手，<br>
-                       但因為頑皮豹的出現而頻頻倒霉。<br>
-                       快來看看頑皮豹與一大鼻子先生<br>
-                       鬥智鬥勇的日常生活吧。
-                       </p>
+                        大鼻子先生經常是頑皮豹的鄰居或對手，<br>
+                        但因為頑皮豹的出現而頻頻倒霉。<br>
+                        快來看看頑皮豹與一大鼻子先生<br>
+                        鬥智鬥勇的日常生活吧。
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="../img/M/鋼彈.png" alt="鋼彈">
+                <div class="movie-text">
+                    <h3>鋼彈</h3>
+                    <p>地球人口因過度飽和，因此人類在太空中建造殖民地。<br>
+                        而故事就發生在殖民地與地球的關係......<br>
+                        地球的政府中央被稱為聯邦軍，<br>
+                        但聯邦軍卻有些腐敗之處，<br>
+                        一些較為偏遠的殖民地開始想要求獨立。</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="../img/M/米奇.png" alt="米老鼠">
+                <div class="movie-text">
+                    <h3>米老鼠</h3>
+                    <p>米老鼠的故事內容主要圍繞著<br>
+                        他作為一個樂觀、善良的主角，<br>
+                        在夥伴的幫助下，運用智慧與執著克服挑戰。</p>
                 </div>
             </div>
 
@@ -123,7 +166,6 @@
                         展開一連串感人冒險。</p>
                 </div>
             </div>
-
         </div>
     </main>
 
@@ -179,5 +221,31 @@
         </ul>
     </footer>
 </body>
+<!--輪播程式碼-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        spaceBetween: 30,
+        slideToClickedSlide: true,
+        watchSlidesProgress: true,
+        coverflowEffect: { rotate: 0, stretch: 0, depth: 120, modifier: 2.5, slideShadows: false },
+        pagination: {
+            el: ".swiper-pagination", type: "bullets", clickable: true, dynamicBullets: true
+        },
+        navigation: false
+    });
+
+    const btnPrev = document.querySelector('.swiper-button-prev');
+    const btnNext = document.querySelector('.swiper-button-next');
+    if (btnPrev && btnNext) {
+        btnPrev.addEventListener('click', () => swiper.slidePrev());
+        btnNext.addEventListener('click', () => swiper.slideNext());
+    }
+</script>
 
 </html>
