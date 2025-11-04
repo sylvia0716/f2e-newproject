@@ -110,9 +110,10 @@ body {
 /* 文字在上面 */
 .product-card p {
     margin: 0 0 10px 0;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 22px;
     color: #000;
+    letter-spacing: 2px;
 }
 
 /* 圖片固定大小 */

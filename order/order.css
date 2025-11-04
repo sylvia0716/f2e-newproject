@@ -114,25 +114,25 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 984px;
-    height: 1090px;
+    width: 750px;
+    height: auto;
     background-color: #e6e6e6;
     /* 深灰色背景 */
     border-radius: 15px;
-    margin: 80px auto;
+    margin: 60px auto;
     /* 置中 */
-    padding: 50px 70px;
+    padding: 40px 50px;
 }
 
 .mb-3 {
-    margin-bottom: 60px !important;
+    margin-bottom: 30px !important;
     /*css蓋過bookstrap*/
 }
 
 /* 標籤文字 */
 .form-label {
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
     color: #000;
 }
@@ -144,7 +144,7 @@ body {
 .orderform input[type="date"],
 .orderform select {
     width: 100%;
-    height: 55px;
+    height: 45px;
     border-radius: 15px;
     border: none;
     font-size: 18px;
@@ -181,7 +181,7 @@ body {
 /* 按鈕樣式 */
 .orderform .btn {
     width: 100%;
-    height: 55px;
+    height: 50px;
     border-radius: 15px;
     background-color: #E60000;
     border: none;
