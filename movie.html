@@ -174,34 +174,7 @@
         ↑
     </button>
 
-    <script>
-        // 取得按鈕元素
-        const backToTopBtn = document.getElementById('backToTopBtn');
-        // 設定按鈕顯示的滾動距離 (例如：滾動超過 300px 時顯示)
-        const scrollThreshold = 300;
-        // 函式：偵測滾動，決定按鈕是否顯示
-        function toggleBackToTopButton() {
-            if (window.scrollY > scrollThreshold) {
-                // 滾動超過門檻，顯示按鈕
-                backToTopBtn.classList.add('show');
-            } else {
-                // 否則隱藏按鈕
-                backToTopBtn.classList.remove('show');
-            }
-        }
-        // 函式：點擊按鈕後平滑滾動到頂部
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // 使用平滑滾動效果
-            });
-        }
-        // 綁定事件監聽器
-        // 1. 頁面滾動時執行偵測函式
-        window.addEventListener('scroll', toggleBackToTopButton);
-        // 2. 按鈕被點擊時執行回頂函式
-        backToTopBtn.addEventListener('click', scrollToTop);
-    </script>
+    <script src="./js/button.js"></script>
 
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
@@ -223,29 +196,6 @@
 </body>
 <!--輪播程式碼-->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    const swiper = new Swiper(".mySwiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        loop: true,
-        spaceBetween: 30,
-        slideToClickedSlide: true,
-        watchSlidesProgress: true,
-        coverflowEffect: { rotate: 0, stretch: 0, depth: 120, modifier: 2.5, slideShadows: false },
-        pagination: {
-            el: ".swiper-pagination", type: "bullets", clickable: true, dynamicBullets: true
-        },
-        navigation: false
-    });
-
-    const btnPrev = document.querySelector('.swiper-button-prev');
-    const btnNext = document.querySelector('.swiper-button-next');
-    if (btnPrev && btnNext) {
-        btnPrev.addEventListener('click', () => swiper.slidePrev());
-        btnNext.addEventListener('click', () => swiper.slideNext());
-    }
-</script>
+<script src="./js/swiper.js"></script>
 
 </html>
