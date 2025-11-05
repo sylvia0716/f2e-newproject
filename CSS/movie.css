@@ -55,7 +55,7 @@ body{
 /* 滑鼠移上去時放大 */
 .header-nav-list-link:hover {
   transform: scale(1.2); /* 放大 1.2 倍 */
-  color: #ff3333; /* 可選：變顏色，讓效果更明顯 */
+  color: #ff3333; /* 變顏色 */
 }
 
 .banner{
@@ -108,8 +108,8 @@ body{
 .movie-card {
   display: flex;
   /*align-items: flex-start;*/
-  align-items: flex-start; /* ✅ 改成靠上對齊 */
-  justify-content: flex-start; /* ✅ 內容從左開始排列 */
+  align-items: flex-start; /* 改成靠上對齊 */
+  justify-content: flex-start; /* 內容從左開始排列 */
   background-color: #f2f2f2;
   border-radius: 20px;
   padding: 30px;
