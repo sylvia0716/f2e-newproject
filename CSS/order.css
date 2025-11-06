@@ -119,8 +119,8 @@ body {
     justify-content: flex-start;
     width: 750px;
     height: auto;
-    background-color: #e6e6e6;
-    /* 深灰色背景 */
+    background-color: rgba(208, 27, 27, 0.7);
+    /* 背景 */
     border-radius: 15px;
     margin: 60px auto;
     /* 置中 */
@@ -137,7 +137,7 @@ body {
     font-weight: 900;
     font-size: 18px;
     margin-bottom: 10px;
-    color: #000;
+    color: #FDFFE9;
 }
 
 /* 輸入框統一樣式 */
@@ -151,6 +151,7 @@ body {
     border-radius: 15px;
     border: none;
     font-size: 18px;
+    font-weight: 500;
     padding: 10px 20px;
 }
 
@@ -159,7 +160,7 @@ body {
     width: auto;
     display: inline-block;
     padding: 10px 25px;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 /* 下拉選單與張數顯示 */
@@ -177,7 +178,7 @@ body {
     background-color: white;
     border: none;
     border-radius: 15px;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 18px;
 }
 
@@ -186,7 +187,7 @@ body {
     width: 100%;
     height: 50px;
     border-radius: 15px;
-    background-color: #E60000;
+    background-color: #e6c337;
     border: none;
     font-size: 20px;
     font-weight: 700;
