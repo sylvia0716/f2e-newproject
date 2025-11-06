@@ -18,6 +18,10 @@ body {
     font-family: "Chiron GoRound TC", sans-serif;
 }
 
+.main {
+    background-color: #d4433e;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -61,7 +65,7 @@ body {
     transform: scale(1.2);
     /* 放大 1.2 倍 */
     color: #ff3333;
-    /* 可選：變顏色，讓效果更明顯 */
+    /*  變顏色，讓效果更明顯 */
 }
 
 .banner {
@@ -87,12 +91,12 @@ body {
 }
 
 .product-row.gray {
-    background-color: #C4C4C4;
+    background-color: #d4433e;
     /* 比 EDEDED 更明顯的灰 */
 }
 
 .product-row.white {
-    background-color: #FFFFFF;
+    background-color: #d4433e;
 }
 
 /* 單一卡片 */
@@ -112,7 +116,7 @@ body {
     margin: 0 0 10px 0;
     font-weight: 600;
     font-size: 22px;
-    color: #000;
+    color: #fdffe9;
     letter-spacing: 2px;
 }
 
@@ -279,4 +283,14 @@ body {
     font-weight: 500;
     font-size: 16px;
     text-decoration: none;
+}
+
+.product-line {
+    width: calc(290px * 3 + 60px * 2);
+    height: 5px;
+    background-color: #FDFFE9; 
+    border: none;
+    margin: 10px auto 0px;
+    border-radius: 10px; 
+    display: block;
 }
