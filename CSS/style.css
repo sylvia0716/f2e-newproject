@@ -13,6 +13,7 @@ html, body {
 
 body{
     font-family: "Chiron GoRound TC", sans-serif;
+    background-color: #d4433e;
 }
 
 .header{
@@ -166,7 +167,7 @@ body{
     top: 50%;           /* 垂直從頂部下移 70% */
     left: 57%;          /* 水平從左側右移 57% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #FDFFE9;
+    color: #FFFFFF;
     font-size: 36px;
     font-weight: 600;
     text-align: right;
