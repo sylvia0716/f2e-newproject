@@ -85,8 +85,8 @@ body{
 
 .block_1 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 30%;           /* 垂直從頂部下移 10% */
-    left: 50%;          /* 水平從左側右移 70% */
+    top: 30%;           /* 垂直從頂部下移 30% */
+    left: 50%;          /* 水平從左側右移 50% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #E60000; 
     font-size: 36px; 
@@ -144,7 +144,7 @@ body{
     color: #E60000;
     font-size: 40px;
     font-weight: bold;
-    text-align: center;
+    text-align: center; /*設定文字在自身區塊內的置中對齊。*/
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 55%; /* 讓文字不會貼到邊緣 */
     background-color: rgba(255, 250, 225, 0.7);
@@ -163,12 +163,11 @@ body{
     display: block;
     width: 100%;
     height: 100%; 
-
 }
 
 .aboutus_text {
     position: absolute; /* 設定為絕對定位 */
-    top: 50%;           /* 垂直從頂部下移 70% */
+    top: 50%;           /* 垂直從頂部下移 50% */
     left: 57%;          /* 水平從左側右移 57% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #FFFFFF;
@@ -178,11 +177,6 @@ body{
     line-height: 2;
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 80%; /* 讓文字不會貼到邊緣 */
-    /*
-    background-color: rgba(147, 43, 43, 0.5);
-    padding: 10px;
-    border-radius: 100px;
-    */
 }
 
 /* 回到頂部按鈕的樣式 */
@@ -201,12 +195,12 @@ body{
     border: none;
     border-radius: 50%; /* 圓形按鈕 */
     font-size: 24px;
-    line-height: 1;
+    line-height: 1; /* 箭頭行高 */
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     
     /* 預設隱藏並添加平滑過渡 */
-    opacity: 0;
+    opacity: 0; /* 初始透明度為 0 */
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
 }
