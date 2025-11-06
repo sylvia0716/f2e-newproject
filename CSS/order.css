@@ -101,12 +101,15 @@ body {
     /* 將文字自身也位移 50% 以置中 */
     color: #E60000;
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     z-index: 10;
     /* 確保文字層級高於圖片 */
     width: 80%;
     /* 讓文字不會貼到邊緣 */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 100px;
 }
 
 

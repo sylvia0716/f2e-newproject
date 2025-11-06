@@ -111,7 +111,7 @@ body{
 
 .block_2 p {
     position: absolute; /* 設定為絕對定位 */
-    top: 65%;           /* 垂直從頂部下移 65% */
+    top: 60%;           /* 垂直從頂部下移 60% */
     left: 30%;          /* 水平從左側右移 30% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #FFFFFF; 
@@ -166,13 +166,18 @@ body{
     top: 50%;           /* 垂直從頂部下移 70% */
     left: 57%;          /* 水平從左側右移 57% */
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #E60000;
+    color: #FDFFE9;
     font-size: 36px;
-    font-weight: bold;
+    font-weight: 600;
     text-align: right;
     line-height: 2;
     z-index: 10; /* 確保文字層級高於圖片 */
     width: 80%; /* 讓文字不會貼到邊緣 */
+    /*
+    background-color: rgba(147, 43, 43, 0.5);
+    padding: 10px;
+    border-radius: 100px;
+    */
 }
 
 /* 回到頂部按鈕的樣式 */
