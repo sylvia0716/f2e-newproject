@@ -125,6 +125,12 @@ body{
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.movie-card.active-card {
+  transform: translateY(-10px) scale(1.03); /* 稍微放大一點 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* 陰影更明顯 */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
 /* 左邊圖片 */
 .movie-card img {
   width: 150px;

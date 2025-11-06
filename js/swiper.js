@@ -33,7 +33,7 @@ if (btnPrev && btnNext) {
     btnNext.addEventListener('click', () => swiper.slideNext());
 }
 
-// --- 點擊輪播圖片自動捲動到對應卡片 ---
+// --- 點擊輪播圖片自動捲動到對應卡片並浮起 ---
 document.querySelectorAll('.swiper-slide').forEach(slide => {
   slide.addEventListener('click', () => {
     const targetId = slide.getAttribute('data-target');
@@ -42,6 +42,19 @@ document.querySelectorAll('.swiper-slide').forEach(slide => {
     if (targetCard) {
       // 平滑滾動到該卡片
       targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // 先移除舊的 active 樣式
+      document.querySelectorAll('.movie-card').forEach(card => {
+        card.classList.remove('active-card');
+      });
+
+      // 加上浮起效果
+      targetCard.classList.add('active-card');
+
+      // 過 1 秒自動移除浮起效果
+      setTimeout(() => {
+        targetCard.classList.remove('active-card');
+      }, 1000);
     }
   });
 });
