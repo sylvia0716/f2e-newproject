@@ -13,7 +13,7 @@ html, body {
 
 body{
     font-family: "Chiron GoRound TC", sans-serif;
-    background-color: #d4433e;
+
 }
 
 .header{
@@ -146,7 +146,11 @@ body{
     font-weight: bold;
     text-align: center;
     z-index: 10; /* 確保文字層級高於圖片 */
-    width: 80%; /* 讓文字不會貼到邊緣 */
+    width: 55%; /* 讓文字不會貼到邊緣 */
+    background-color: rgba(255, 250, 225, 0.7);
+    padding: 50px 0px;
+    border-radius: 30px;
+    line-height: 1.5;
 }
 
 .aboutus{
