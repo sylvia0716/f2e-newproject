@@ -32,3 +32,16 @@ if (btnPrev && btnNext) {
     btnPrev.addEventListener('click', () => swiper.slidePrev());
     btnNext.addEventListener('click', () => swiper.slideNext());
 }
+
+// --- 點擊輪播圖片自動捲動到對應卡片 ---
+document.querySelectorAll('.swiper-slide').forEach(slide => {
+  slide.addEventListener('click', () => {
+    const targetId = slide.getAttribute('data-target');
+    const targetCard = document.getElementById(targetId);
+
+    if (targetCard) {
+      // 平滑滾動到該卡片
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+});
