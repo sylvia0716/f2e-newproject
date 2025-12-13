@@ -79,7 +79,6 @@ body {
     height: auto;
 }
 
-
 /*測試中的漢堡按鈕 */
 .burger_btn {
     width: 28px;
@@ -93,8 +92,8 @@ body {
 
 .burger_btn span {
     display: block;
-    height: 3px;
-    background: #333;
+    height: 4px;
+    background: #E60000;
     border-radius: 3px;
     transition: 0.3s;
 }
@@ -133,7 +132,7 @@ body {
 }
 
 .mobile_menu a {
-    color: #333;
+    color: #E60000;
     text-decoration: none;
     font-size: 20px;
 }
@@ -173,7 +172,7 @@ body {
         display: none;
     }
 }
-/* 結束 */
+/* 漢堡測試結束 */
 
 /* 滑鼠移上去時放大 */
 .header-nav-list-link:hover {
