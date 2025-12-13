@@ -1,71 +1,5 @@
-html {
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Chiron GoRound TC", sans-serif;
-}
-
 .main {
     background-color: #d4433e;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 84px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #FDFFE9;
-}
-
-.header_logo {
-    margin-left: 60px;
-}
-
-.header-nav-list {
-    display: flex;
-    margin: 0 58px 0 0;
-    padding: 0;
-}
-
-.header-nav-list-item {
-    list-style: none;
-    margin-left: 15px;
-}
-
-/* 導覽列連結一般狀態 */
-.header-nav-list-link {
-    display: block;
-    text-decoration: none;
-    color: #E60000;
-    padding: 10px 20px;
-    font-weight: 700;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    /* 加上過渡動畫，讓放大更順暢 */
-}
-
-/* 滑鼠移上去時放大 */
-.header-nav-list-link:hover {
-    transform: scale(1.2);
-    /* 放大 1.2 倍 */
-    color: #ff3333;
-    /*  變顏色，讓效果更明顯 */
 }
 
 .banner {
@@ -78,7 +12,6 @@ body {
     width: 100%;
     height: auto;
 }
-
 
 .product-row {
     display: flex;
@@ -187,103 +120,6 @@ body {
 .product-card:hover .product-overlay {
     opacity: 1;
     /* 浮層完全顯示 (淡入) */
-}
-
-.back-to-top-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 99;
-
-  width: 50px;
-  height: 50px;
-  background-color: #E60000;
-  color: #FDFFE9;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-
-  /* 🧠 關鍵：明確指定字型與對齊設定 */
-  font-family: "Chiron GoRound TC", sans-serif;
-  line-height: 1;
-  vertical-align: middle;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  cursor: pointer;
-
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s, transform 0.2s ease;
-}
-
-.back-to-top-btn:hover {
-  background-color: #ff3333;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-}
-
-
-/* 當按鈕需要顯示時的狀態 */
-.back-to-top-btn.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding: 30px 60px;
-    /* 增加上下和左右的內距，擴大 Footer 區域 */
-    background-color: #FDFFE9;
-}
-
-.footer_left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer_logo img {
-    width: 131px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.footer_info p {
-    color: #E60000;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 5px 0;
-}
-
-
-.footer-nav-list {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: right;
-}
-
-.footer-nav-list-item {
-    margin: 0 0 10px 0;
-    padding: 0;
-    list-style: none;
-}
-
-.footer-nav-list-link {
-    color: #E60000;
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration: none;
 }
 
 .product-line {

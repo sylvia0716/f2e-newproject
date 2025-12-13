@@ -4,7 +4,11 @@
 <head>
     <title>柑仔影院</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/style.css">
+    <!--RWD-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS & favicon-->
+    <link rel="stylesheet" href="CSS/all_style.css">
+    <link rel="stylesheet" href="CSS/index.css">
     <link rel="icon" href="img/favicon.ico">
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,30 +26,51 @@
             <li class="header-nav-list-item"><a href="./movie.html" class="header-nav-list-link">影院資訊</a></li>
             <li class="header-nav-list-item"><a href="./order.html" class="header-nav-list-link">電影訂票</a></li>
         </ul>
+        <img class="header_burgur" src="img/test.svg" alt="test_img">
     </header>
 
     <!--main主要內容-->
     <main class="main">
         <div class="container">
             <section class="banner">
-                <img src="./img/hero.svg" alt="banner_img"><!--橫幅圖片:柑仔影院-->
+                <picture>
+                    <source srcset="./img/hero.svg" media="(min-width: 1200px)"> <!--桌機版:比1200還大的時候-->
+                    <source srcset="./img/hero.svg" media="(min-width: 768px)">   <!--平板版-->
+                    <img src="./img/hero_m.svg" alt="banner_img"> <!--手機版-->
+                </picture>
             </section>
             <section class="content">
                 <div class="block_1"><!--第一塊圖+文-->
                     <p>玻璃罐裡裝著時間，<br>糖果的甜在空氣裡化開。</p>
-                    <img src="./img/main_1.svg" alt="candy_img">
+                    <picture>
+                        <source srcset="./img/main_1.svg" media="(min-width: 1200px)">
+                        <source srcset="./img/main_1.svg" media="(min-width: 768px)">
+                        <img src="./img/main_1_m.svg" alt="candy_img">
+                    </picture>
                 </div>
                 <div class="block_2"><!--第二塊圖-->
-                    <img src="./img/main_2.svg" alt="movie1_img">
-                    <p>二樓的電影散發著柔光，照亮一段舊日子。</p>
+                    <picture>
+                        <source srcset="./img/main_2.svg" media="(min-width: 1200px)">
+                        <source srcset="./img/main_2.svg" media="(min-width: 768px)">
+                        <img src="./img/main_2_m.svg" alt="movie1_img">
+                    </picture>
+                    <p>二樓的電影散發著柔光，<br>照亮一段舊日子。</p>
                 </div>
                 <div class="block_3"><!--三塊文+圖-->
-                    <img src="./img/main_3.svg" alt="movie2_img">
+                    <picture>
+                        <source srcset="./img/main_3.svg" media="(min-width: 1200px)">
+                        <source srcset="./img/main_3.svg" media="(min-width: 768px)">
+                        <img src="./img/main_3_m.svg" alt="movie2_img">
+                    </picture>
                     <p>柑仔店，<br>永遠開在那個午後。</p>
                 </div>
             </section>
             <section class="aboutus"><!--關於我們文＋圖-->
-                <img src="./img/main_4.svg" alt="aboutus_img">
+                <picture>
+                        <source srcset="./img/main_4.svg" media="(min-width: 1200px)">
+                        <source srcset="./img/main_4.svg" media="(min-width: 768px)">
+                        <img src="./img/main_4_m.svg" alt="aboutus_img">
+                </picture>
                 <div class="aboutus_text">
                     <p>我們相信，時間不會帶走一切，<br>
                         有些記憶會留在某些地方。<br>
@@ -54,7 +79,8 @@
                         <br>
                         在這裡，<br>
                         我們把那份單純的快樂重新拼起來，<br>
-                        讓柑仔影院成為一個能讓大家「重訪過去」的地方。</p>
+                        讓柑仔影院成為一個能讓大家「重訪過去」的地方。
+                    </p>
                 </div>
             </section>
         </div>
@@ -67,10 +93,16 @@
 
     <script src="./js/button.js"></script>
     <script src="./js/fadein.js"></script>
- 
+
     <footer class="footer"><!--footer目錄-->
         <div class="footer_left">
-            <a class="footer_logo" href="./index.html"><img src="./img/logo.svg" alt="logo_img"></a>
+            <a class="footer_logo" href="./index.html">
+                <picture>
+                    <source srcset="./img/logo.svg" media="(min-width: 1200px)">
+                    <source srcset="./img/logo.svg" media="(min-width: 768px)">
+                    <img src="./img/logo.svg" alt="logo_img">
+                </picture>
+            </a>
             <div class="footer_info">
                 <p>地址：臺北市大安區和平東路2段134號</p>
                 <p>電話：02-2732-1104</p>
