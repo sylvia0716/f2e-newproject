@@ -79,6 +79,102 @@ body {
     height: auto;
 }
 
+
+/*測試中的漢堡按鈕 */
+.burger_btn {
+    width: 28px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+.burger_btn span {
+    display: block;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* 漢堡變 X */
+.burger_btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.burger_btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger_btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== 側邊選單樣式 ===== */
+.mobile_menu {
+    position: fixed;
+    top: 0;
+    right: -260px;      /* 初始隱藏 */
+    width: 260px;
+    height: 100vh;
+    background: #FFF9E6;
+    padding: 80px 20px;
+    transition: 0.35s ease;
+    z-index: 1100;
+}
+
+.mobile_menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile_menu li {
+    margin-bottom: 25px;
+}
+
+.mobile_menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* 選單展開 */
+.mobile_menu.active {
+    right: 0;
+}
+
+/* ===== 遮罩 ===== */
+.menu_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.menu_overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* 平板以上隱藏漢堡，保留原始選單 */
+@media (min-width: 768px) {
+    .burger_btn {
+        display: none;
+    }
+    .mobile_menu,
+    .menu_overlay {
+        display: none;
+    }
+}
+/* 結束 */
+
 /* 滑鼠移上去時放大 */
 .header-nav-list-link:hover {
     transform: scale(1.2);
@@ -192,6 +288,3 @@ body {
         display: none;
     }
 }
-
-
-

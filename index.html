@@ -26,8 +26,32 @@
             <li class="header-nav-list-item"><a href="./movie.html" class="header-nav-list-link">影院資訊</a></li>
             <li class="header-nav-list-item"><a href="./order.html" class="header-nav-list-link">電影訂票</a></li>
         </ul>
+        <!-- 漢堡按鈕（手機版） -->
+        <div class="burger_btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- 測試中的漢堡選單結束 -->
+
         <img class="header_burgur" src="img/test.svg" alt="test_img">
     </header>
+
+    <!-- 測試中的漢堡選單 -->
+    <!-- 側邊選單 -->
+    <nav class="mobile_menu">
+        <ul>
+            <li><a href="#">電影介紹</a></li>
+            <li><a href="#">最新消息</a></li>
+            <li><a href="#">線上訂票</a></li>
+            <li><a href="#">關於我們</a></li>
+        </ul>
+    </nav>
+
+    <!-- 遮罩 -->
+    <div class="menu_overlay" onclick="toggleMenu()"></div>
+    <!-- 測試中的漢堡選單結束 -->
+
 
     <!--main主要內容-->
     <main class="main">
@@ -35,7 +59,7 @@
             <section class="banner">
                 <picture>
                     <source srcset="./img/hero.svg" media="(min-width: 1200px)"> <!--桌機版:比1200還大的時候-->
-                    <source srcset="./img/hero.svg" media="(min-width: 768px)">   <!--平板版-->
+                    <source srcset="./img/hero.svg" media="(min-width: 768px)"> <!--平板版-->
                     <img src="./img/hero_m.svg" alt="banner_img"> <!--手機版-->
                 </picture>
             </section>
@@ -67,9 +91,9 @@
             </section>
             <section class="aboutus"><!--關於我們文＋圖-->
                 <picture>
-                        <source srcset="./img/main_4.svg" media="(min-width: 1200px)">
-                        <source srcset="./img/main_4.svg" media="(min-width: 768px)">
-                        <img src="./img/main_4_m.svg" alt="aboutus_img">
+                    <source srcset="./img/main_4.svg" media="(min-width: 1200px)">
+                    <source srcset="./img/main_4.svg" media="(min-width: 768px)">
+                    <img src="./img/main_4_m.svg" alt="aboutus_img">
                 </picture>
                 <div class="aboutus_text">
                     <p>我們相信，時間不會帶走一切，<br>
@@ -116,6 +140,20 @@
             <li class="footer-nav-list-item"><a href="./order.html" class="footer-nav-list-link">電影訂票</a></li>
         </ul>
     </footer>
+
+    <!--測試中的漢堡選單-->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".mobile_menu");
+            const overlay = document.querySelector(".menu_overlay");
+            const burger = document.querySelector(".burger_btn");
+
+            menu.classList.toggle("active");
+            overlay.classList.toggle("active");
+            burger.classList.toggle("active");
+        }
+    </script>
+    <!--測試中的漢堡選單結束-->
 
 </body>
 
