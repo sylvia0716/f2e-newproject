@@ -135,6 +135,8 @@ body {
     color: #E60000;
     text-decoration: none;
     font-size: 20px;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 /* 選單展開 */
@@ -278,6 +280,7 @@ body {
     text-decoration: none;
 }
 
+/* 平板及電腦的時候，隱藏漢堡並且顯示完整的選單 */
 @media screen and (min-width: 768px) {
     .header-nav-list-link {
         display: block;
