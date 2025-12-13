@@ -163,8 +163,7 @@
 
 .aboutus_text {
     position: absolute; /* 設定為絕對定位 */
-    top: 25%;           /* 垂直從頂部下移 25% */
-    left: 55%;          /* 水平從左側右移 55% */
+
     transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
     color: #FFFFFF;
     font-size: 20px;
@@ -177,30 +176,50 @@
     padding-right: 0px;
 }
 
-@media screen and (min-width: 768px) { /* 平板 */
+.aboutus_p {
+  display: none;
+}
+
+/* 手機 */
+@media (max-width: 767px) {
   .aboutus_text {
-    font-size: 26px;
-    top: 50%;
-    left: 75%;
-    width: 45%; /* 讓文字不會貼到邊緣 */
-    padding: 40px 0px;
-    line-height: 1.5;
+    top: 26%;
+    left: 50%;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: right;
+  }
+
+  .aboutus_p.mobile {
+    display: block;
   }
 }
 
-@media screen and (min-width: 1200px) { /* 電腦 */
+/* 平板 */
+@media (min-width: 768px) and (max-width: 1199px) {
   .aboutus_text {
-    position: absolute; /* 設定為絕對定位 */
-    top: 50%;           /* 垂直從頂部下移 50% */
-    left: 57%;          /* 水平從左側右移 57% */
-    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #FFFFFF;
-    font-size: 36px;
-    font-weight: 600;
-    text-align: right;
+    top: 49%;
+    left: 57%;
+    font-size: 24px;
     line-height: 2;
-    z-index: 10; /* 確保文字層級高於圖片 */
-    width: 80%; /* 讓文字不會貼到邊緣 */
+  }
+
+  .aboutus_p.tablet {
+    display: block;
+  }
+}
+
+/* 電腦 */
+@media (min-width: 1200px) {
+  .aboutus_text {
+    top: 50%;
+    left: 57%;
+    font-size: 34px;
+    line-height: 2;
+  }
+
+  .aboutus_p.desktop {
+    display: block;
   }
 }
 
