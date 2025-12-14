@@ -67,6 +67,11 @@ body {
     margin-left: 15px;
 }
 
+@media screen and (min-width: 768px) {
+    .header-nav-list-item {
+        margin-left: 0px;
+    }
+}
 
 /* 導覽列連結一般狀態 */
 .header-nav-list-link {
@@ -78,6 +83,19 @@ body {
     font-size: 18px;
     transition: all 0.3s ease;
     /* 加上過渡動畫，讓放大更順暢 */
+}
+
+@media screen and (min-width: 768px) {
+    .header-nav-list-link {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header-nav-list-link {
+        font-weight: 700;
+        font-size: 20px;
+    }
 }
 
 .header_burgur {
@@ -247,9 +265,15 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 30px 60px;
+    padding: 30px 10px;
     /* 增加上下和左右的內距，擴大 Footer 區域 */
     background-color: #FDFFE9;
+}
+
+@media screen and (min-width: 1200px) {    /* 電腦 */
+    .footer {
+        padding: 30px 60px;
+    }
 }
 
 .footer_left {
@@ -266,9 +290,21 @@ body {
 
 .footer_info p {
     color: #E60000;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     margin: 5px 0;
+}
+
+@media screen and (min-width: 768px) {    /* 電腦 */
+    .footer_info p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {    /* 電腦 */
+    .footer_info p {
+        font-size: 18px;
+    }
 }
 
 .footer-nav-list {
@@ -289,8 +325,20 @@ body {
 .footer-nav-list-link {
     color: #E60000;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {    /* 電腦 */
+    .footer-nav-list-link {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) {    /* 電腦 */
+    .footer-nav-list-link {
+        font-size: 18px;
+    }
 }
 
 /* 平板及電腦的時候，隱藏漢堡並且顯示完整的選單 */
