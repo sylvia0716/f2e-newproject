@@ -29,15 +29,6 @@
     }
 }
 
-.product-row.gray {
-    background-color: #d4433e;
-    /* 比 EDEDED 更明顯的灰 */
-}
-
-.product-row.white {
-    background-color: #d4433e;
-}
-
 /* 單一卡片 */
 .product-card {
     width: 100%;
