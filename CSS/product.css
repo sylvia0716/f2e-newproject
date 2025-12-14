@@ -14,13 +14,19 @@
 }
 
 .product-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    /* 卡片之間距離 */
-    padding: 80px 0;
-    /* 上下間距 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 手機：2 個 */
+    gap: 24px;              /* 手機間距小一點 */
+    padding: 40px 20px;     /* 手機留左右 padding */
+    justify-items: center;  /* 卡片置中 */
+}
+
+@media (min-width: 1200px) {
+    .product-row {
+        grid-template-columns: repeat(3, 1fr); /* 電腦：3 個 */
+        gap: 60px;
+        padding: 80px 0;
+    }
 }
 
 .product-row.gray {
@@ -34,7 +40,8 @@
 
 /* 單一卡片 */
 .product-card {
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -123,11 +130,11 @@
 }
 
 .product-line {
-    width: calc(290px * 3 + 60px * 2);
+    width: 90%;
+    max-width: calc(290px * 3 + 60px * 2);
     height: 5px;
-    background-color: #FDFFE9; 
+    background-color: #FDFFE9;
     border: none;
-    margin: 10px auto 0px;
-    border-radius: 10px; 
-    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
 }
