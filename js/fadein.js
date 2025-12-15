@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const fadeElements = document.querySelectorAll(
-    ".aboutus_text"
+    ".aboutus_text, .fade-target"
   );
 
   const observer = new IntersectionObserver(

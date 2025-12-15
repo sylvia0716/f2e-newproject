@@ -283,6 +283,15 @@
   opacity: 1;
 }
 
+.fade-target {
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+}
+
+.fade-target.fade-in {
+  opacity: 1;
+}
+
 .content {
   overflow: visible; /* 確保可被偵測 */
 }
