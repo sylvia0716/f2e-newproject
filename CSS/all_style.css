@@ -333,9 +333,8 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-
-    /* 電腦 */
     .footer-nav-list-link {
+        display: block;
         color: #E60000;
         font-weight: 500;
         text-decoration: none;
@@ -344,9 +343,8 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-
-    /* 電腦 */
     .footer-nav-list-link {
+        display: block;
         color: #E60000;
         font-weight: 500;
         text-decoration: none;
@@ -360,7 +358,7 @@ body {
         display: block;
     }
 
-    .header_burgur {
+    .header_burger {
         display: none;
     }
 }
