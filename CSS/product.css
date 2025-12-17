@@ -69,24 +69,27 @@
 }
 
 .product-row {
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr;   /* ✅ 手機 1 欄 */
+  gap: 24px;
+  padding: 40px 16px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .product-row {
     grid-template-columns: repeat(2, 1fr);
-    /* 手機：2 個 */
-    gap: 24px;
-    /* 手機間距小一點 */
-    padding: 40px 20px;
-    /* 手機留左右 padding */
-    justify-items: center;
-    /* 卡片置中 */
+    padding: 60px 32px;   /* ✅ 重點：左右留白 */
+    gap: 32px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .product-row {
-        grid-template-columns: repeat(3, 1fr);
-        /* 電腦：3 個 */
-        gap: 60px;
-        padding: 80px 0;
-    }
+  .product-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding: 80px 0;
+  }
 }
 
 .product-card {
@@ -133,7 +136,8 @@
 
 /* 圖片內容容器：用來作為浮層的定位參考點，並控制溢出隱藏 */
 .product-content {
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     height: 341px;
     /* 圖片的固定高度 */
     position: relative;
