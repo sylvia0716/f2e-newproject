@@ -76,6 +76,16 @@
   justify-items: center;
 }
 
+@media (max-width: 767px) {
+  .product-row {
+    gap: 36px 24px;
+  }
+
+  .product-card {
+    margin-bottom: 12px;
+  }
+}
+
 @media (min-width: 768px) {
   .product-row {
     grid-template-columns: repeat(2, 1fr);
