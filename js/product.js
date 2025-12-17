@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.product-card');
 
-    // 如果找不到卡片，直接結束（防呆）
+    // 如果找不到卡片，直接結束
     if (!cards.length) return;
 
     // 準備 IntersectionObserver
@@ -25,3 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => observer.observe(card));
 });
+
+function toggleFlip(element) {
+    // 切換 flipped 這個 class
+    element.classList.toggle('flipped');
+}

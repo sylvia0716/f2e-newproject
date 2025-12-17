@@ -149,13 +149,74 @@
     width: 100%;
     max-width: 290px;
     height: 341px;
-    /* 圖片的固定高度 */
     position: relative;
-    /* 設定為定位父容器 */
-    overflow: hidden;
-    /* 圖片放大時，超出範圍的部分會被隱藏 */
-    border-radius: 8px;
+    /* 這裡原本有 overflow: hidden，建議移除或改為 visible 以避免裁切 3D 效果 */
+    overflow: visible; 
+    perspective: 1000px; /* 3D 透視距離，讓翻轉更有立體感 */
+    cursor: pointer; /* 讓滑鼠變成手指形狀，提示可點擊 */
 }
+/* 新增：內部旋轉容器 */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s; /* 翻轉動畫時間 */
+    transform-style: preserve-3d; /* 保持 3D 空間 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 當被加入 .flipped class 時，旋轉 180 度 */
+.product-content.flipped .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* 正面與背面的共同設定 */
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari 支援 */
+    backface-visibility: hidden; /* 隱藏背面 */
+    border-radius: 8px; /* 圓角設定在面層 */
+    overflow: hidden; /* 確保圖片不溢出圓角 */
+}
+
+/* 正面樣式 */
+.flip-front {
+    background-color: transparent;
+    z-index: 2;
+}
+
+/* 確保圖片填滿正面 */
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 背面樣式 */
+.flip-back {
+    background-color: #b03530;
+    color: #FDFFE9;
+    transform: rotateY(180deg); /* 預先旋轉180度 */
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    padding: 20px;           /* 內距避免文字貼在邊上 */
+    box-sizing: border-box;
+    border: 2px solid #FDFFE9; /* 加邊框 */
+}
+
+/* 背面文字樣式 */
+.flip-back .product-desc p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
 
 .product-desc {
     margin-top: 12px;
