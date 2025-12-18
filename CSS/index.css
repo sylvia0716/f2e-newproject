@@ -124,31 +124,38 @@
   transform: translateY(20px);
   transform-box: fill-box;
   transform-origin: center;
+  /* 移除這裡的 animation */
+}
+
+/* 【關鍵】當 body 有 page-loaded 時，裡面的 .title 才開始跑動畫 */
+body.page-loaded .title {
   animation: fadeUp 0.8s ease-out forwards;
 }
 
-.t1 {
-  animation-delay: 2.4s;
+/* 重新設定延遲時間 (Delay) */
+/* 因為 Loading 已經消失了，這裡的時間可以設短一點，不用再等 2.4秒了 */
+body.page-loaded .t1 {
+  animation-delay: 0.2s; /* 第一行字 */
 }
 
-.t2 {
-  animation-delay: 2.6s;
+body.page-loaded .t2 {
+  animation-delay: 0.4s; /* 第二行字 */
 }
 
-.t3 {
-  animation-delay: 2.8s;
+body.page-loaded .t3 {
+  animation-delay: 0.6s; /* 第三行字 */
 }
 
-.t4 {
-  animation-delay: 3s;
+body.page-loaded .t4 {
+  animation-delay: 0.8s; /* 第四行字 */
 }
 
+/* fadeUp 關鍵影格保持不變 */
 @keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -224,7 +231,7 @@
 }
 
 /* 進畫面後 */
-.js-animate.is-visible {
+body.page-loaded .js-animate.is-visible {
   animation: slideInLeft 0.8s ease-out forwards;
 }
 
