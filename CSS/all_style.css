@@ -299,7 +299,7 @@ body {
 
 @media screen and (min-width: 768px) {
 
-    /* 電腦 */
+    /* 平板 */
     .footer_info p {
         font-size: 16px;
     }
