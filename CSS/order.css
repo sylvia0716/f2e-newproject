@@ -105,7 +105,6 @@
     line-height: 1.6;
 }
 
-
 .orderform {
     display: flex;
     flex-direction: column;
@@ -230,4 +229,35 @@
         border-radius: 15px;
         margin-top: 40px;
     }
+}
+
+/* 預設全部隱藏 */
+.ticket_p {
+  display: none;
+  line-height: 1.8;
+}
+
+/* 📱 手機 */
+@media (max-width: 767px) {
+  .ticket_p.mobile {
+    display: block;
+    font-size: 20px;
+  }
+
+}
+
+/* 📟 平板 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .ticket_p.tablet {
+    display: block;
+    font-size: 24px;
+  }
+}
+
+/* 🖥 桌機 */
+@media (min-width: 1200px) {
+  .ticket_p.desktop {
+    display: block;
+    border-radius: 20px;
+  }
 }
