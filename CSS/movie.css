@@ -1,53 +1,64 @@
-.banner{
-    width: 100%;
+.banner {
+  width: 100%;
 }
 
 .banner img {
-    display: block; /* 移除圖片底部可能的多餘空間 */
-    width: 100%;    
-    height: auto;   
+  display: block;
+  /* 移除圖片底部可能的多餘空間 */
+  width: 100%;
+  height: auto;
 }
 
 .banner2 {
-    position: relative; /* 設定為相對定位 */
-    width: 100%;
-    overflow: hidden; /* 確保內容不會溢出 */
+  position: relative;
+  /* 設定為相對定位 */
+  width: 100%;
+  overflow: hidden;
+  /* 確保內容不會溢出 */
 }
 
 .banner2 img {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 
 }
 
 .banner2 p {
-    position: absolute; /* 設定為絕對定位 */
-    top: 50%;           /* 垂直從頂部下移 50% */
-    left: 50%;          /* 水平從左側右移 50% */
-    transform: translate(-50%, -50%); /* 將文字自身也位移 50% 以置中 */
-    color: #E60000;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    z-index: 10; /* 確保文字層級高於圖片 */
-    width: 80%; /* 讓文字不會貼到邊緣 */
+  position: absolute;
+  /* 設定為絕對定位 */
+  top: 50%;
+  /* 垂直從頂部下移 50% */
+  left: 50%;
+  /* 水平從左側右移 50% */
+  transform: translate(-50%, -50%);
+  /* 將文字自身也位移 50% 以置中 */
+  color: #E60000;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10;
+  /* 確保文字層級高於圖片 */
+  width: 80%;
+  /* 讓文字不會貼到邊緣 */
 }
 
 .container {
   width: 85%;
-  margin: 40px auto; 
+  margin: 100px auto;
   display: grid;
   grid-template-columns: 1fr;
+  /* 兩欄 */
   gap: 40px 60px;
+  /* 上下40px、左右60px 間距 */
   justify-content: center;
 }
 
 @media (min-width: 1200px) {
   .container {
-    margin: 100px auto; 
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 60px;
+    /* 桌機才有左右間距 */
   }
 }
 
@@ -55,40 +66,52 @@
 .movie-card {
   display: flex;
   /*align-items: flex-start;*/
-  align-items: flex-start; /* 改成靠上對齊 */
-  justify-content: flex-start; /* 內容從左開始排列 */
+  align-items: flex-start;
+  /* 改成靠上對齊 */
+  justify-content: flex-start;
+  /* 內容從左開始排列 */
   background-color: #fff9e6;
   border-radius: 20px;
   padding: 30px;
   gap: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* 陰影 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media (max-width: 767px) {
   .movie-card {
     width: 92%;
+    /* ⭐ 用比例 */
     max-width: 380px;
-    /* 確保這裡的 margin 不會產生額外的上下推擠 */
-    margin: 0 auto; 
+    /* ⭐ 上限 */
+    margin: 0 auto;
     padding: 24px;
+
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 }
 
-/* 滑鼠移上去有輕微浮起效果 */
-.movie-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+@media (min-width: 1200px) {
+
+  /* 使用 .show:hover 確保在卡片出現後依然能觸發懸浮 */
+  .movie-card.show:hover {
+    transform: translateY(-15px);
+    /* 向上浮起更多，效果更明顯 */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    /* 加深加大陰影 */
+    cursor: pointer;
+  }
+
+  /* 讓圖片在懸浮時也有點變化（選配，效果更高級） */
+  .movie-card.show:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
 }
 
-.movie-card.active-card {
-  transform: translateY(-10px) scale(1.03); /* 稍微放大一點 */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* 陰影更明顯 */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
 
 /* 左邊圖片 */
 .movie-card img {
@@ -124,9 +147,12 @@
 .movie-card {
   opacity: 0;
   transform: translateY(40px);
+  /* 建議明確指定要過渡的屬性 */
   transition:
     opacity 0.4s ease,
-    transform 0.4s ease;
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.4s ease,
+    background-color 0.3s ease;
 }
 
 /* 出現後 */
