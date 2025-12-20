@@ -355,6 +355,15 @@
   margin: 20px auto 60px;
 }
 
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  10% { transform: scale(1.1) rotate(2deg); }
+  20% { transform: scale(1) rotate(-2deg); }
+  30% { transform: scale(1.1) rotate(0deg); }
+  40% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
 /* 按鈕樣式 */
 .load-more-btn {
   background-color: transparent;
@@ -366,11 +375,15 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
+  animation: heartBeat 3s infinite ease-in-out;
 }
 
 .load-more-btn:hover {
+  animation-play-state: paused;
   background-color: #ffffff;
   color: #d4433e;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
 }
 
 /* --- 手機/平板版 RWD 控制 --- */
