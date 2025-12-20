@@ -322,6 +322,33 @@
         </ul>
     </footer>
 
+    <div id="movieModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <div class="modal-body">
+                <div class="modal-poster">
+                    <img src="" id="modalImg" alt="電影海報">
+                </div>
+
+                <div class="modal-info">
+                    <h2 id="modalTitle">電影標題</h2>
+                    <hr>
+                    <ul class="info-list">
+                        <li><strong>上映日期：</strong><span id="modalDate"></span></li>
+                        <li><strong>電影片長：</strong><span id="modalDuration"></span></li>
+                        <li><strong>電影分級：</strong><span id="modalRating"></span></li>
+                        <li><strong>導演：</strong><span id="modalDirector"></span></li>
+                        <li><strong>演員：</strong><span id="modalCast"></span></li>
+                    </ul>
+                    <div class="modal-desc">
+                        <p id="modalDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
