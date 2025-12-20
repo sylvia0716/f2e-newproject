@@ -145,6 +145,10 @@
 
 /* 初始狀態：隱藏 */
 .movie-card {
+  position: relative;
+  /* 這是關鍵，讓內部的絕對定位以卡片為基準 */
+  padding-bottom: 50px;
+  /* 增加底部內距，預留空間給提示文字，避免文字重疊 */
   opacity: 0;
   transform: translateY(40px);
   /* 建議明確指定要過渡的屬性 */
@@ -350,18 +354,36 @@
 
 /* 更多電影按鈕 */
 .load-more-container {
-  display: none; /* 預設隱藏 (電腦版) */
+  display: none;
+  /* 預設隱藏 (電腦版) */
   justify-content: center;
   margin: 20px auto 60px;
 }
 
 @keyframes heartBeat {
-  0% { transform: scale(1); }
-  10% { transform: scale(1.1) rotate(2deg); }
-  20% { transform: scale(1) rotate(-2deg); }
-  30% { transform: scale(1.1) rotate(0deg); }
-  40% { transform: scale(1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1) rotate(2deg);
+  }
+
+  20% {
+    transform: scale(1) rotate(-2deg);
+  }
+
+  30% {
+    transform: scale(1.1) rotate(0deg);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* 按鈕樣式 */
@@ -388,7 +410,8 @@
 
 /* --- 手機/平板版 RWD 控制 --- */
 @media (max-width: 1199px) {
-  /* 在 1200px 以下 (非兩欄模式時) 隱藏標記的卡片 */
+
+  /* 在 1200px 以下隱藏標記的卡片 */
   .movie-card.mobile-hidden {
     display: none !important;
   }
@@ -396,5 +419,49 @@
   /* 顯示按鈕容器 */
   .load-more-container {
     display: flex;
+  }
+}
+
+/* --- 查看詳情提示標籤 --- */
+.detail-hint {
+  position: absolute;
+  right: 25px;
+  /* 距離右邊 25px */
+  bottom: 20px;
+  /* 距離底部 20px */
+
+  font-size: 14px;
+  font-weight: bold;
+  color: #d4433e;
+  background-color: rgba(255, 249, 230, 0.9);
+  /* 加一點背景色，確保在圖片上也能看清 */
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* --- 當滑鼠移到卡片上時，提示文字的效果 --- */
+.movie-card:hover .detail-hint {
+  color: #e60000;
+  transform: translateX(5px);
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .movie-card {
+    padding-bottom: 70px;
+    /* 手機版通常需要更多底部空間 */
+  }
+
+  .detail-hint {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 往左回推自身寬度的一半，達成完美置中 */
+
+    bottom: 20px;
+    white-space: nowrap;
   }
 }
