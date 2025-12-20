@@ -119,7 +119,7 @@
         <section class="content">
             <div class="block_1"><!--第一塊圖+文-->
                 <div class="ticket-info">
-                    
+
                     <!-- 手機 -->
                     <p class="ticket_p mobile">
                         柑仔影院位於二樓，<br>
@@ -166,18 +166,18 @@
             <form id="orderForm"><!--訂購表單-->
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">訂購人姓名</label>
-                    <input type="text" id="buyerName" class="form-control" required
+                    <input type="text" id="buyerName" class="form-control" placeholder="張三" required
                         oninvalid="this.setCustomValidity('請輸入有效的姓名')" oninput="this.setCustomValidity('')">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">訂購人電話</label>
-                    <input type="tel" id="buyerPhone" class="form-control" required
+                    <input type="tel" id="buyerPhone" class="form-control" placeholder="0912345678" required
                         oninvalid="this.setCustomValidity('請輸入有效的電話號碼 ex. 0912345678')"
                         oninput="this.setCustomValidity('')">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">訂購人Email</label>
-                    <input type="email" id="buyerEmail" required
+                    <input type="email" id="buyerEmail" class="form-control" placeholder="example@gmail.com" required
                         oninvalid="this.setCustomValidity('請輸入有效的Email ex. example@gmail.com')"
                         oninput="this.setCustomValidity('')">
                 </div>
@@ -191,12 +191,11 @@
                     <div class="input-group">
                         <select class="form-select" id="ticketCount" required>
                             <option value="">選擇張數</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <option value="1">1 張</option>
+                            <option value="2">2 張</option>
+                            <option value="3">3 張</option>
+                            <option value="4">4 張</option>
                         </select>
-                        <span class="input-group-text">張</span>
                     </div>
                 </div>
 

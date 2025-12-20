@@ -205,7 +205,6 @@
     }
 
     .orderform input[type="date"] {
-        width: auto; /* 平板以上改回自動寬度 */
         display: inline-block;
     }
 }
@@ -260,4 +259,26 @@
     display: block;
     border-radius: 20px;
   }
+}
+
+/* 修改所有輸入框的提示字顏色與透明度 */
+.orderform input::placeholder {
+    /* 使用 rgba，最後一個數字 0.4 代表 40% 的透明度，數值越小越淡 */
+    color: rgba(0, 0, 0, 0.4) !important; 
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 針對不同瀏覽器的相容性設定 */
+.orderform input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.orderform input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    opacity: 1; /* Firefox 需要這行來確保顏色正確顯示 */
+}
+
+.orderform input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
 }
