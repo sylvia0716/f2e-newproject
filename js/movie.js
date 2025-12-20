@@ -122,7 +122,7 @@ cards.forEach(card => {
     const data = movieData[id];
 
     if (data) {
-      // 替換彈窗內容
+      // 1. 先替換所有文字與圖片內容
       document.getElementById("modalTitle").innerText = data.title;
       document.getElementById("modalImg").src = data.img;
       document.getElementById("modalDate").innerText = data.date;
@@ -133,12 +133,21 @@ cards.forEach(card => {
       document.getElementById("modalDirector").innerText = data.director;
       document.getElementById("modalCast").innerText = data.cast;
 
+      // 2. 先將彈窗顯示出來（這步很重要，必須先顯示才能控制捲軸）
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+
+      // 3. ⭐ 關鍵修正：使用 setTimeout 確保瀏覽器已完成渲染再重設位置
+      setTimeout(() => {
+        const modalBody = document.querySelector(".modal-body");
+        if (modalBody) {
+          modalBody.scrollTop = 0; // 強制回到最上方
+        }
+      }, 10); // 10 毫秒的極短延遲通常就足夠了
+
+      // 4. 更新訂票連結
       const orderBtn = document.getElementById("orderBtn");
       orderBtn.href = `./order.html?movie=${encodeURIComponent(data.title)}`;
-
-      // 顯示彈窗 (使用 flex 是為了讓它垂直水平置中)
-      modal.style.display = "flex";
-      document.body.style.overflow = "hidden"; // 防止背景捲動
     }
   });
 });
