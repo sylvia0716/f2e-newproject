@@ -164,3 +164,27 @@ window.addEventListener("click", (e) => {
     document.body.style.overflow = "auto";
   }
 });
+
+// --- 手機版「更多電影」按鈕邏輯 ---
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const loadMoreContainer = document.getElementById('loadMoreContainer');
+const hiddenCards = document.querySelectorAll('.movie-card.mobile-hidden');
+
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', () => {
+    // 1. 顯示所有隱藏的卡片
+    hiddenCards.forEach(card => {
+      // 先改為 flex 以便顯示，再移除類別
+      card.style.display = 'flex'; 
+      
+      // 觸發之前寫好的 IntersectionObserver 動畫效果
+      // 稍微延遲一點點讓 display: flex 生效，動畫才會跑
+      setTimeout(() => {
+        card.classList.remove('mobile-hidden');
+      }, 10);
+    });
+
+    // 2. 隱藏按鈕容器
+    loadMoreContainer.style.display = 'none';
+  });
+}

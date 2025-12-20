@@ -347,3 +347,41 @@
     padding: 15px 0;
   }
 }
+
+/* 更多電影按鈕 */
+.load-more-container {
+  display: none; /* 預設隱藏 (電腦版) */
+  justify-content: center;
+  margin: 20px auto 60px;
+}
+
+/* 按鈕樣式 */
+.load-more-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #ffffff;
+  color: #d4433e;
+}
+
+/* --- 手機/平板版 RWD 控制 --- */
+@media (max-width: 1199px) {
+  /* 在 1200px 以下 (非兩欄模式時) 隱藏標記的卡片 */
+  .movie-card.mobile-hidden {
+    display: none !important;
+  }
+
+  /* 顯示按鈕容器 */
+  .load-more-container {
+    display: flex;
+  }
+}
