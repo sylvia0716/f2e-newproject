@@ -36,17 +36,18 @@
 
 .container {
   width: 85%;
-  margin: 100px auto;
+  margin: 40px auto; 
   display: grid;
-  grid-template-columns: 1fr; /* 兩欄 */
-  gap: 40px 60px; /* 上下40px、左右60px 間距 */
+  grid-template-columns: 1fr;
+  gap: 40px 60px;
   justify-content: center;
 }
 
 @media (min-width: 1200px) {
   .container {
+    margin: 100px auto; 
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 60px; /* 桌機才有左右間距 */
+    gap: 40px 60px;
   }
 }
 
@@ -66,11 +67,11 @@
 
 @media (max-width: 767px) {
   .movie-card {
-    width: 92%;          /* ⭐ 用比例 */
-    max-width: 380px;    /* ⭐ 上限 */
-    margin: 0 auto;
+    width: 92%;
+    max-width: 380px;
+    /* 確保這裡的 margin 不會產生額外的上下推擠 */
+    margin: 0 auto; 
     padding: 24px;
-
     flex-direction: column;
     align-items: center;
     text-align: center;
