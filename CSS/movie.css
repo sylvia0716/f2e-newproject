@@ -65,7 +65,6 @@
 /* 卡片樣式 */
 .movie-card {
   display: flex;
-  /*align-items: flex-start;*/
   align-items: flex-start;
   /* 改成靠上對齊 */
   justify-content: flex-start;
@@ -82,9 +81,9 @@
 @media (max-width: 767px) {
   .movie-card {
     width: 92%;
-    /* ⭐ 用比例 */
+    /* 用比例 */
     max-width: 380px;
-    /* ⭐ 上限 */
+    /* 上限 */
     margin: 0 auto;
     padding: 24px;
 
@@ -105,7 +104,7 @@
     cursor: pointer;
   }
 
-  /* 讓圖片在懸浮時也有點變化（選配，效果更高級） */
+  /* 讓圖片在懸浮時也有點變化 */
   .movie-card.show:hover img {
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -146,7 +145,7 @@
 /* 初始狀態：隱藏 */
 .movie-card {
   position: relative;
-  /* 這是關鍵，讓內部的絕對定位以卡片為基準 */
+  /* 讓內部的絕對定位以卡片為基準 */
   padding-bottom: 50px;
   /* 增加底部內距，預留空間給提示文字，避免文字重疊 */
   opacity: 0;
@@ -178,7 +177,7 @@
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
-  /* ⭐ 新增：給遮罩加上 padding，這會像一道牆把彈窗往內推 */
+  /* 給遮罩加上 padding，這會像一道牆把彈窗往內推 */
   padding: 20px;
 }
 
@@ -187,7 +186,7 @@
   background-color: #fff9e6 !important;
   opacity: 1 !important;
 
-  /* ⭐ 修改：使用 calc 確保在任何寬度下，左右都至少有 40px 的總縫隙 */
+  /* 使用 calc 確保在任何寬度下，左右都至少有 40px 的總縫隙 */
   width: calc(100% - 40px);
   max-width: 800px;
   /* 電腦版最大維持 800px */
@@ -224,14 +223,14 @@
   cursor: pointer;
   font-weight: bold;
 
-  /* ⭐ 關鍵 1：確保在彈窗的最上層，不會被圖片或文字蓋住 */
+  /* 確保在彈窗的最上層，不會被圖片或文字蓋住 */
   z-index: 2100;
 
-  /* ⭐ 關鍵 2：增加點擊範圍 (手機版必備) */
+  /* 增加點擊範圍 (手機版必備) */
   padding: 10px;
   line-height: 1;
 
-  /* 讓滑鼠/手指移上去時不會選取到文字 */
+  /* 讓滑鼠或手指移上去時不會選取到文字 */
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   /* 移除手機點擊時的藍色陰影 */
@@ -289,7 +288,7 @@
     flex-direction: column;
     align-items: center;
     max-height: 70vh;
-    /* 避免超出螢幕，可捲動 */
+    /* 避免超出螢幕 */
     overflow-y: auto;
   }
 
@@ -297,7 +296,7 @@
     /* 手機版內距稍微縮小，讓內容空間變大，但外邊界仍由 calc 控制 */
     padding: 24px;
     width: calc(100% - 30px);
-    /* 手機版縫隙稍微窄一點點，更美觀 */
+    /* 手機版縫隙稍微窄一點點 */
   }
 
   .modal-poster img {
@@ -309,14 +308,13 @@
 .modal-footer {
   margin-top: 30px;
   text-align: right;
-  /* 按鈕靠右對齊，也可以改為 center */
+  /* 按鈕靠右對齊 */
 }
 
 /* 立即訂票按鈕樣式 */
 .book-now-btn {
   display: inline-block;
   background-color: #d4433e;
-  /* 柑仔影院的主色調紅色 */
   color: #ffffff !important;
   padding: 12px 35px;
   font-size: 18px;
@@ -422,7 +420,7 @@
   }
 }
 
-/* --- 查看詳情提示標籤 --- */
+/* 查看詳情提示標籤 */
 .detail-hint {
   position: absolute;
   right: 25px;
@@ -442,7 +440,7 @@
   z-index: 5;
 }
 
-/* --- 當滑鼠移到卡片上時，提示文字的效果 --- */
+/* 當滑鼠移到卡片上時，提示文字的效果 */
 .movie-card:hover .detail-hint {
   color: #e60000;
   transform: translateX(5px);

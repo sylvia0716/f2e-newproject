@@ -20,12 +20,11 @@ body {
   height: auto;
 }
 
-/* picture 決定高度（關鍵） */
+/* picture 決定高度 */
 .banner-bg img {
   width: 100%;
   height: auto;
   display: block;
-  /* 消掉 img 底下神秘白邊 */
 }
 
 /* 動畫層只是「貼上去」 */
@@ -75,11 +74,11 @@ body {
 }
 
 .product-row {
-  display: grid;
-  grid-template-columns: 1fr;   /* ✅ 手機 1 欄 */
-  gap: 24px;
-  padding: 40px 16px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 16px 0; 
+    justify-items: center;
 }
 
 @media (max-width: 767px) {
@@ -95,7 +94,7 @@ body {
 @media (min-width: 768px) {
   .product-row {
     grid-template-columns: repeat(2, 1fr);
-    padding: 60px 32px;   /* ✅ 重點：左右留白 */
+    padding: 60px 32px;
     gap: 32px;
   }
 }
@@ -147,7 +146,7 @@ body {
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.5s ease;
-    /* 讓圖片放大/縮小有動畫效果 */
+    /* 讓圖片放大縮小有動畫效果 */
 }
 
 /* 圖片內容容器：用來作為浮層的定位參考點，並控制溢出隱藏 */
@@ -156,7 +155,6 @@ body {
     max-width: 290px;
     height: 341px;
     position: relative;
-    /* 這裡原本有 overflow: hidden，建議移除或改為 visible 以避免裁切 3D 效果 */
     overflow: visible; 
     perspective: 1000px; /* 3D 透視距離，讓翻轉更有立體感 */
     cursor: pointer; /* 讓滑鼠變成手指形狀，提示可點擊 */
@@ -212,7 +210,7 @@ body {
     justify-content: center; 
     padding: 20px;           /* 內距避免文字貼在邊上 */
     box-sizing: border-box;
-    border: 2px solid #FDFFE9; /* 加邊框 */
+    border: 2px solid #FDFFE9;
 }
 
 /* 背面文字樣式 */
@@ -252,14 +250,16 @@ body {
     border-radius: 10px;
 }
 
-/* --- 更多商品按鈕容器 --- */
+/* 更多商品按鈕容器 */
 .load-more-container {
-  display: none; 
-  justify-content: center;
-  margin: 0 auto;       /* 取消外部 Margin */
-  padding: 40px 0 60px; /* 改用 Padding 撐開空間 */
-  transition: opacity 0.3s ease; /* 增加透明度過渡 */
+    display: none; 
+    justify-content: center;
+    /* 這裡的 40px 數字越小按鈕越往上 */
+    margin: 40px auto 60px; 
+    padding: 0; 
+    transition: opacity 0.3s ease;
 }
+
 
 /* 當按鈕被點擊後，我們也可以考慮先讓它變透明，而不是直接消失 */
 .load-more-container.fade-out {
@@ -267,7 +267,7 @@ body {
     pointer-events: none;
 }
 
-/* --- 定義心跳抖動動畫 --- */
+/* 跳抖動畫 */
 @keyframes heartBeat {
   0% { transform: scale(1); }
   10% { transform: scale(1.1) rotate(2deg); }
@@ -277,7 +277,7 @@ body {
   100% { transform: scale(1); }
 }
 
-/* --- 按鈕樣式 --- */
+/* 按鈕樣式 */
 .load-more-btn {
   background-color: transparent;
   color: #ffffff;
@@ -298,7 +298,6 @@ body {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-/* --- RWD 控制 (針對手機和平板) --- */
 @media (max-width: 1199px) {
   /* 隱藏標記的商品卡片 */
   .product-card.product-hidden {
