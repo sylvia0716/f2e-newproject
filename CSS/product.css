@@ -1,3 +1,9 @@
+body {
+    background-color: #d4433e;
+    margin: 0;
+    padding: 0;
+}
+
 .main {
     background-color: #d4433e;
 }
@@ -244,4 +250,63 @@
     border: none;
     margin: 10px auto 0;
     border-radius: 10px;
+}
+
+/* --- 更多商品按鈕容器 --- */
+.load-more-container {
+  display: none; 
+  justify-content: center;
+  margin: 0 auto;       /* 取消外部 Margin */
+  padding: 40px 0 60px; /* 改用 Padding 撐開空間 */
+  transition: opacity 0.3s ease; /* 增加透明度過渡 */
+}
+
+/* 當按鈕被點擊後，我們也可以考慮先讓它變透明，而不是直接消失 */
+.load-more-container.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- 定義心跳抖動動畫 --- */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  10% { transform: scale(1.1) rotate(2deg); }
+  20% { transform: scale(1) rotate(-2deg); }
+  30% { transform: scale(1.1) rotate(0deg); }
+  40% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+/* --- 按鈕樣式 --- */
+.load-more-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: heartBeat 3s infinite ease-in-out; /* 套用動畫 */
+}
+
+.load-more-btn:hover {
+  animation-play-state: paused; /* 滑鼠移上去暫停動畫 */
+  background-color: #ffffff;
+  color: #d4433e;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* --- RWD 控制 (針對手機和平板) --- */
+@media (max-width: 1199px) {
+  /* 隱藏標記的商品卡片 */
+  .product-card.product-hidden {
+    display: none !important;
+  }
+
+  /* 在 1200px 以下顯示按鈕 */
+  .load-more-container {
+    display: flex;
+  }
 }
