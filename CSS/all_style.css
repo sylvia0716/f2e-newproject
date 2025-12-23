@@ -259,7 +259,7 @@ body {
     visibility: visible;
 }
 
-/* --- 1. 定義 Header 進場動畫 --- */
+/* Header 進場動畫 */
 @keyframes headerSlideDown {
     from {
         opacity: 0;
@@ -271,21 +271,20 @@ body {
     }
 }
 
-/* --- 2. 初始狀態：先隱藏 Logo、導覽文字與漢堡按鈕 --- */
+/* 初始狀態：先隱藏 Logo、導覽文字與漢堡按鈕 */
 .header_logo, 
 .header-nav-list-item, 
 .burger_btn {
     opacity: 0;
 }
 
-/* --- 3. ⭐ 修改這裡：將 .start-header-anim 改為 .page-loaded --- */
 .page-loaded .header_logo,
 .page-loaded .header-nav-list-item,
 .page-loaded .burger_btn {
     animation: headerSlideDown 0.8s ease forwards;
 }
 
-/* --- 4. 設定序列延遲：確保目錄在 0.1s ~ 0.6s 之間跳完 --- */
+/* 設定序列延遲：目錄在 0.1s ~ 0.6s 之間跳完 */
 .page-loaded .header_logo { animation-delay: 0.1s; }
 .page-loaded .header-nav-list-item:nth-child(1) { animation-delay: 0.3s; }
 .page-loaded .header-nav-list-item:nth-child(2) { animation-delay: 0.4s; }
@@ -305,7 +304,6 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-
     /* 電腦 */
     .footer {
         padding: 30px 60px;
@@ -332,7 +330,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-
     /* 平板 */
     .footer_info p {
         font-size: 16px;
@@ -340,7 +337,6 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-
     /* 電腦 */
     .footer_info p {
         font-size: 18px;
@@ -386,7 +382,7 @@ body {
     }
 }
 
-/* 平板及電腦的時候，隱藏漢堡並且顯示完整的選單 */
+/* 平板及電腦的時候隱藏漢堡並且顯示完整的選單 */
 @media screen and (min-width: 768px) {
     .header-nav-list-link {
         display: block;
@@ -401,15 +397,15 @@ body {
 #loading {
   position: fixed;   /* 固定定位，不隨捲軸滾動 */
   inset: 0;          /* 鋪滿全螢幕 (top:0, right:0, bottom:0, left:0) */
-  background-color: #f8f1dc; /* 復古淡黃底色 */
-  display: flex;     /* 使用 Flexbox 居中 */
+  background-color: #f8f1dc; 
+  display: flex;   
   align-items: center;
   justify-content: center;
   z-index: 9999;     /* 確保在所有元素最上層 */
   transition: opacity 0.5s ease; /* 淡出動畫效果 */
 }
 
-/* Loading 內容容器 */
+/* Loading 內容 */
 .loading-content {
   text-align: center;
   color: #E60000;
@@ -428,7 +424,7 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* --- loading... 文字點點動畫 --- */
+/* loading... 文字點點動畫 */
 .loading-content p::after {
   content: "";
   animation: dots 2s infinite;

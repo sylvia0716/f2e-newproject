@@ -47,13 +47,6 @@ body.page-loaded .title {
   animation: fadeUp 0.8s ease-out forwards;
 }
 
-/* --- (如果之後要弄標題動畫的話)調整標題序列延遲，銜接在目錄動畫（約 0.8s）之後
-body.page-loaded .t1 { animation-delay: 1.0s; }
-body.page-loaded .t2 { animation-delay: 1.2s; }
-body.page-loaded .t3 { animation-delay: 1.4s; }
-body.page-loaded .t4 { animation-delay: 1.6s; }
- --- */
-
 .container {
   width: 85%;
   margin: 100px auto;
@@ -106,7 +99,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
 
 @media (min-width: 1200px) {
 
-  /* 使用 .show:hover 確保在卡片出現後依然能觸發懸浮 */
+  /* 使用 .show:hover 在卡片出現後依然能觸發懸浮 */
   .movie-card.show:hover {
     transform: translateY(-15px);
     /* 向上浮起更多，效果更明顯 */
@@ -121,7 +114,6 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
     transition: transform 0.3s ease;
   }
 }
-
 
 /* 左邊圖片 */
 .movie-card img {
@@ -161,7 +153,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
   /* 增加底部內距，預留空間給提示文字，避免文字重疊 */
   opacity: 0;
   transform: translateY(40px);
-  /* 建議明確指定要過渡的屬性 */
+  /* 明確指定要過渡的屬性 */
   transition:
     opacity 0.4s ease,
     transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
@@ -272,7 +264,6 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
   flex: 1;
   text-align: left;
   color: #333333 !important;
-  /* 強制文字為深灰色 */
 }
 
 .modal-info h2 {
@@ -293,7 +284,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
   color: #d4433e;
 }
 
-/* 手機版 RWD 調整 */
+/* 手機版 RWD */
 @media (max-width: 767px) {
   .modal-body {
     flex-direction: column;
@@ -304,7 +295,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
   }
 
   .modal-content {
-    /* 手機版內距稍微縮小，讓內容空間變大，但外邊界仍由 calc 控制 */
+    /* 手機版內距稍微縮小，外邊界仍由 calc 控制 */
     padding: 24px;
     width: calc(100% - 30px);
     /* 手機版縫隙稍微窄一點點 */
@@ -346,7 +337,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
   color: #ffffff !important;
 }
 
-/* 手機版 RWD 調整 */
+/* 手機版 */
 @media (max-width: 767px) {
   .modal-footer {
     text-align: center;
@@ -356,7 +347,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
 
   .book-now-btn {
     width: 100%;
-    /* 手機版按鈕撐滿寬度，更好按 */
+    /* 手機版按鈕 */
     padding: 15px 0;
   }
 }
@@ -468,7 +459,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
     right: auto;
     left: 50%;
     transform: translateX(-50%);
-    /* 往左回推自身寬度的一半，達成完美置中 */
+    /* 往左回推自身寬度的一半置中 */
 
     bottom: 20px;
     white-space: nowrap;

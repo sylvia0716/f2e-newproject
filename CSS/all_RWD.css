@@ -12,3 +12,34 @@
     /* 大型裝置 min-width: var(--l_width); */
     /* 超大型裝置 min-width: var(--xl_width); */
 }
+
+/*周姿廷複製用*/
+.tablet,
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .desktop,
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .desktop,
+  .tablet {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}

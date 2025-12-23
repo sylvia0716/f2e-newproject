@@ -21,7 +21,7 @@
   height: auto;
 }
 
-/* picture 決定高度（關鍵） */
+/* picture 決定高度 */
 .banner-bg img {
   width: 100%;
   height: auto;
@@ -29,14 +29,43 @@
   /* 消掉 img 底下神秘白邊 */
 }
 
-/* 動畫層只是「貼上去」 */
+/* 標題位置設定 */
 .banner-anim {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  /* 不影響滑鼠 */
+}
+
+.banner-anim.tablet,
+.banner-anim.mobile {
+  display: none;
+}
+
+.banner-anim.desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .banner-anim.desktop,
+  .banner-anim.mobile {
+    display: none;
+  }
+  .banner-anim.tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  .banner-anim.desktop,
+  .banner-anim.tablet {
+    display: none;
+  }
+  .banner-anim.mobile {
+    display: block;
+  }
 }
 
 .title {
@@ -105,12 +134,12 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
     background-color: rgba(208, 27, 27, 0.7);
     border-radius: 15px;
 
-    /* 使用百分比寬度，讓手機版左右有空間 */
+    /* 讓手機版左右有空間 */
     width: 92%; 
     margin: 30px auto;
     padding: 30px 20px;
     
-    /* 限制最大寬度，避免在大螢幕無限變寬 */
+    /* 限制最大寬度避免在大螢幕無限變寬 */
     max-width: 750px; 
     box-sizing: border-box; /* 確保 padding 不會撐大寬度 */
 }

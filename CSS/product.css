@@ -27,14 +27,90 @@ body {
   display: block;
 }
 
-/* 動畫層只是「貼上去」 */
+/* 標題位置設定 */
 .banner-anim {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  /* 不影響滑鼠 */
+}
+
+.banner-anim.tablet,
+.banner-anim.mobile {
+  display: none;
+}
+
+.banner-anim.desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+
+  .banner-anim.desktop,
+  .banner-anim.mobile {
+    display: none;
+  }
+
+  .banner-anim.tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+
+  .banner-anim.desktop,
+  .banner-anim.tablet {
+    display: none;
+  }
+
+  .banner-anim.mobile {
+    display: block;
+  }
+}
+
+/* 糖果位置設定 */
+.banner-candy {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.banner-candy.tablet,
+.banner-candy.mobile {
+  display: none;
+}
+
+.banner-candy.desktop {
+  display: block;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+
+  .banner-candy.desktop,
+  .banner-candy.mobile {
+    display: none;
+  }
+
+  .banner-candy.tablet {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+
+  .banner-candy.desktop,
+  .banner-candy.tablet {
+    display: none;
+  }
+
+  .banner-candy.mobile {
+    display: block;
+  }
 }
 
 .title {
@@ -49,10 +125,21 @@ body.page-loaded .title {
 }
 
 /* --- 調整標題序列延遲，銜接在目錄動畫（約 0.8s）之後 --- */
-body.page-loaded .t1 { animation-delay: 1.0s; }
-body.page-loaded .t2 { animation-delay: 1.2s; }
-body.page-loaded .t3 { animation-delay: 1.4s; }
-body.page-loaded .t4 { animation-delay: 1.6s; }
+body.page-loaded .t1 {
+  animation-delay: 1.0s;
+}
+
+body.page-loaded .t2 {
+  animation-delay: 1.2s;
+}
+
+body.page-loaded .t3 {
+  animation-delay: 1.4s;
+}
+
+body.page-loaded .t4 {
+  animation-delay: 1.6s;
+}
 
 @keyframes fadeUp {
   from {
@@ -93,18 +180,14 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
 }
 
 @media (min-width: 1200px) {
-.product-row {
-    /* 1. 將 1fr 改為固定寬度或縮小容器 */
-    grid-template-columns: repeat(3, 1fr); 
-    
-    /* 2. 縮小間距：從原本的 60px 縮小到 30px (可依喜好調整) */
-    gap: 120px 30px; 
-    
-    /* 3. ⭐ 關鍵：限制整個商品區域的最大寬度，防止在大螢幕散太開 */
-    /* 290px * 3 + 30px * 2 = 930px，設定約 1000px 左右最緊湊 */
-    max-width: 1050px; 
-    margin: 0 auto;    /* 確保縮小後的容器依然在網頁中間 */
-    
+  .product-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px 30px;
+
+    /* 限制整個商品區域的最大寬度，防止在大螢幕散太開 */
+    max-width: 1050px;
+    margin: 0 auto;
+    /* 確保縮小後的容器依然在網頁中間 */
     padding: 80px 0;
   }
 }
@@ -164,7 +247,7 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
   /* 讓滑鼠變成手指形狀，提示可點擊 */
 }
 
-/* 新增：內部旋轉容器 */
+/* 內部旋轉容器 */
 .flip-box-inner {
   position: relative;
   width: 100%;
@@ -355,17 +438,12 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
   background-color: #e6c337;
   color: #d4433e;
   font-size: 22px;
-  /* 稍微再加大一點 */
   font-weight: 900;
   padding: 8px 18px;
-
   border: 3px solid #FDFFE9;
   border-radius: 4px;
-
   /* 調整旋轉角度 */
   transform: rotate(-10deg);
-
-  /* 復古硬陰影 */
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
 
   z-index: 15;
