@@ -1,11 +1,11 @@
 body {
-    background-color: #d4433e;
-    margin: 0;
-    padding: 0;
+  background-color: #d4433e;
+  margin: 0;
+  padding: 0;
 }
 
 .main {
-    background-color: #d4433e;
+  background-color: #d4433e;
 }
 
 .banner {
@@ -74,11 +74,11 @@ body {
 }
 
 .product-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 40px 16px 0; 
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 40px 16px 0;
+  justify-items: center;
 }
 
 @media (max-width: 767px) {
@@ -108,173 +108,202 @@ body {
 }
 
 .product-card {
-    width: 100%;
-    max-width: 290px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  max-width: 290px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    /* 初始狀態 */
-    opacity: 0;
-    transform: translateY(30px);
+  /* 初始狀態 */
+  opacity: 0;
+  transform: translateY(30px);
 
-    transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 /* 出現後 */
 .product-card.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 文字在上面 */
 .product-card p {
-    margin: 0 0 10px 0;
-    font-weight: 600;
-    font-size: 22px;
-    color: #fdffe9;
-    letter-spacing: 2px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  font-size: 22px;
+  color: #fdffe9;
+  letter-spacing: 2px;
 }
 
 /* 圖片固定大小 */
 .product-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.5s ease;
-    /* 讓圖片放大縮小有動畫效果 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+  /* 讓圖片放大縮小有動畫效果 */
 }
 
 /* 圖片內容容器：用來作為浮層的定位參考點，並控制溢出隱藏 */
 .product-content {
-    width: 100%;
-    max-width: 290px;
-    height: 341px;
-    position: relative;
-    overflow: visible; 
-    perspective: 1000px; /* 3D 透視距離，讓翻轉更有立體感 */
-    cursor: pointer; /* 讓滑鼠變成手指形狀，提示可點擊 */
+  width: 100%;
+  max-width: 290px;
+  height: 341px;
+  position: relative;
+  overflow: visible;
+  perspective: 1000px;
+  /* 3D 透視距離，讓翻轉更有立體感 */
+  cursor: pointer;
+  /* 讓滑鼠變成手指形狀，提示可點擊 */
 }
+
 /* 新增：內部旋轉容器 */
 .flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s; /* 翻轉動畫時間 */
-    transform-style: preserve-3d; /* 保持 3D 空間 */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  /* 翻轉動畫時間 */
+  transform-style: preserve-3d;
+  /* 保持 3D 空間 */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 當被加入 .flipped class 時，旋轉 180 度 */
 .product-content.flipped .flip-box-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* 正面與背面的共同設定 */
-.flip-front, .flip-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari 支援 */
-    backface-visibility: hidden; /* 隱藏背面 */
-    border-radius: 8px; /* 圓角設定在面層 */
-    overflow: hidden; /* 確保圖片不溢出圓角 */
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari 支援 */
+  backface-visibility: hidden;
+  /* 隱藏背面 */
+  border-radius: 8px;
+  /* 圓角設定在面層 */
+  overflow: hidden;
+  /* 確保圖片不溢出圓角 */
 }
 
 /* 正面樣式 */
 .flip-front {
-    background-color: transparent;
-    z-index: 2;
+  background-color: transparent;
+  z-index: 2;
 }
 
 /* 確保圖片填滿正面 */
 .flip-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 背面樣式 */
 .flip-back {
-    background-color: #b03530;
-    color: #FDFFE9;
-    transform: rotateY(180deg); /* 預先旋轉180度 */
-    display: flex;
-    align-items: center;     
-    justify-content: center; 
-    padding: 20px;           /* 內距避免文字貼在邊上 */
-    box-sizing: border-box;
-    border: 2px solid #FDFFE9;
+  background-color: #b03530;
+  color: #FDFFE9;
+  transform: rotateY(180deg);
+  /* 預先旋轉180度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  /* 內距避免文字貼在邊上 */
+  box-sizing: border-box;
+  border: 2px solid #FDFFE9;
 }
 
 /* 背面文字樣式 */
 .flip-back .product-desc p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0;
-    font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
 }
 
 
 .product-desc {
-    margin-top: 12px;
-    font-size: 15px;
-    color: #FDFFE9;
-    line-height: 1.4;
+  margin-top: 12px;
+  font-size: 15px;
+  color: #FDFFE9;
+  line-height: 1.4;
 }
 
 @media (hover: hover) {
-    .product-card:hover {
-        transform: translateY(-5px);
-    }
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
 
-    .product-card:hover img {
-        transform: scale(1.05);
-    }
+  .product-card:hover img {
+    transform: scale(1.05);
+  }
 }
 
 
 .product-line {
-    width: 90%;
-    max-width: calc(290px * 3 + 60px * 2);
-    height: 5px;
-    background-color: #FDFFE9;
-    border: none;
-    margin: 10px auto 0;
-    border-radius: 10px;
+  width: 90%;
+  max-width: calc(290px * 3 + 60px * 2);
+  height: 5px;
+  background-color: #FDFFE9;
+  border: none;
+  margin: 10px auto 0;
+  border-radius: 10px;
 }
 
 /* 更多商品按鈕容器 */
 .load-more-container {
-    display: none; 
-    justify-content: center;
-    /* 這裡的 40px 數字越小按鈕越往上 */
-    margin: 40px auto 60px; 
-    padding: 0; 
-    transition: opacity 0.3s ease;
+  display: none;
+  justify-content: center;
+  /* 這裡的 40px 數字越小按鈕越往上 */
+  margin: 40px auto 60px;
+  padding: 0;
+  transition: opacity 0.3s ease;
 }
 
 
 /* 當按鈕被點擊後，我們也可以考慮先讓它變透明，而不是直接消失 */
 .load-more-container.fade-out {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* 跳抖動畫 */
 @keyframes heartBeat {
-  0% { transform: scale(1); }
-  10% { transform: scale(1.1) rotate(2deg); }
-  20% { transform: scale(1) rotate(-2deg); }
-  30% { transform: scale(1.1) rotate(0deg); }
-  40% { transform: scale(1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1) rotate(2deg);
+  }
+
+  20% {
+    transform: scale(1) rotate(-2deg);
+  }
+
+  30% {
+    transform: scale(1.1) rotate(0deg);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* 按鈕樣式 */
@@ -288,17 +317,20 @@ body {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  animation: heartBeat 3s infinite ease-in-out; /* 套用動畫 */
+  animation: heartBeat 3s infinite ease-in-out;
+  /* 套用動畫 */
 }
 
 .load-more-btn:hover {
-  animation-play-state: paused; /* 滑鼠移上去暫停動畫 */
+  animation-play-state: paused;
+  /* 滑鼠移上去暫停動畫 */
   background-color: #ffffff;
   color: #d4433e;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 @media (max-width: 1199px) {
+
   /* 隱藏標記的商品卡片 */
   .product-card.product-hidden {
     display: none !important;
@@ -308,4 +340,44 @@ body {
   .load-more-container {
     display: flex;
   }
+}
+
+/* --- 復古價錢標籤設計 --- */
+.price-tag {
+  position: absolute;
+  /* ⭐ 定位改為左下角 */
+  bottom: 15px;
+  left: -15px;
+  /* ⭐ 負值讓它向左凸出卡片邊界 */
+
+  background-color: #e6c337;
+  color: #d4433e;
+  font-size: 22px;
+  /* 稍微再加大一點 */
+  font-weight: 900;
+  padding: 8px 18px;
+
+  border: 3px solid #FDFFE9;
+  border-radius: 4px;
+
+  /* ⭐ 調整旋轉角度，讓左側翹起更有動態感 */
+  transform: rotate(-10deg);
+
+  /* 復古硬陰影 */
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+
+  z-index: 15;
+  /* 確保在最上層 */
+  pointer-events: none;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  /* 確保文字不換行 */
+}
+
+/* ⚠️ 重要關鍵：確保凸出的標籤不被剪掉 */
+.product-content,
+.flip-box-inner,
+.flip-front {
+  overflow: visible !important;
+  /* 必須設為 visible 標籤才能凸出來 */
 }
