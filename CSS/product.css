@@ -95,14 +95,23 @@ body {
   .product-row {
     grid-template-columns: repeat(2, 1fr);
     padding: 60px 32px;
-    gap: 32px;
+    gap: 80px 32px;
   }
 }
 
 @media (min-width: 1200px) {
-  .product-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+.product-row {
+    /* 1. 將 1fr 改為固定寬度或縮小容器 */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* 2. 縮小間距：從原本的 60px 縮小到 30px (可依喜好調整) */
+    gap: 120px 30px; 
+    
+    /* 3. ⭐ 關鍵：限制整個商品區域的最大寬度，防止在大螢幕散太開 */
+    /* 290px * 3 + 30px * 2 = 930px，設定約 1000px 左右最緊湊 */
+    max-width: 1050px; 
+    margin: 0 auto;    /* 確保縮小後的容器依然在網頁中間 */
+    
     padding: 80px 0;
   }
 }
@@ -273,7 +282,7 @@ body {
 }
 
 
-/* 當按鈕被點擊後，我們也可以考慮先讓它變透明，而不是直接消失 */
+/* 當按鈕被點擊後，先讓它變透明，而不是直接消失 */
 .load-more-container.fade-out {
   opacity: 0;
   pointer-events: none;
@@ -342,13 +351,13 @@ body {
   }
 }
 
-/* --- 復古價錢標籤設計 --- */
+/* 復古價錢標籤設計 */
 .price-tag {
   position: absolute;
-  /* ⭐ 定位改為左下角 */
+  /* 定位左下角 */
   bottom: 15px;
   left: -15px;
-  /* ⭐ 負值讓它向左凸出卡片邊界 */
+  /* 負值讓它向左凸出卡片邊界 */
 
   background-color: #e6c337;
   color: #d4433e;
@@ -360,7 +369,7 @@ body {
   border: 3px solid #FDFFE9;
   border-radius: 4px;
 
-  /* ⭐ 調整旋轉角度，讓左側翹起更有動態感 */
+  /* 調整旋轉角度 */
   transform: rotate(-10deg);
 
   /* 復古硬陰影 */
@@ -374,7 +383,7 @@ body {
   /* 確保文字不換行 */
 }
 
-/* ⚠️ 重要關鍵：確保凸出的標籤不被剪掉 */
+/* 確保凸出的標籤不被剪掉 */
 .product-content,
 .flip-box-inner,
 .flip-front {
