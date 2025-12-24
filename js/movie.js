@@ -6,7 +6,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.add('show');
-        }, index * 70); // ⭐ 一張一張出現（快）
+        }, index * 70); // 一張一張出現
         observer.unobserve(entry.target);
       }
     });
@@ -137,7 +137,7 @@ cards.forEach(card => {
       modal.style.display = "flex";
       document.body.style.overflow = "hidden";
 
-      // 3. ⭐ 關鍵修正：使用 setTimeout 確保瀏覽器已完成渲染再重設位置
+      // 3. 使用 setTimeout 確保瀏覽器已完成渲染再重設位置
       setTimeout(() => {
         const modalBody = document.querySelector(".modal-body");
         if (modalBody) {
