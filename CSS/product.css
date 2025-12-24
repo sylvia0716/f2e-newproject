@@ -157,7 +157,7 @@ body.page-loaded .t4 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  padding: 40px 16px 0;
+  padding: 40px 16px 80px;
   justify-items: center;
 }
 
