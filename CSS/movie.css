@@ -470,4 +470,10 @@ body.page-loaded .title {
     bottom: 20px;
     white-space: nowrap;
   }
+  
+  .movie-card:hover .detail-hint {
+    transform: translateX(-50%); /* 保持在中間，不要位移 5px */
+    text-decoration: none;        /* 如果你也不想要底線出現，可以加這行 */
+    /* color: #d4433e; */         /* 如果希望連顏色都不要變，可以取消註解這行 */
+  }
 }
