@@ -23,10 +23,10 @@ const movieData = {
   "1": {
     title: "美少女戰士",
     img: "./img/M/美少女戰士.png",
-    date: "1992-03-07 (日本首播)",
-    duration: "24分鐘/集",
-    genre: "動畫、奇幻、冒險", // 新增
-    version: "日語原音、國語配音", // 新增
+    date: "2026/01/10",
+    duration: "24分鐘",
+    genre: "動畫、奇幻、冒險",
+    version: "日語原音、國語配音",
     rating: "普遍級",
     director: "佐藤順一",
     cast: "三石琴乃、久川綾、富澤美智惠"
@@ -34,8 +34,8 @@ const movieData = {
   "2": {
     title: "藍色小精靈",
     img: "./img/M/藍色小精靈.png",
-    date: "1981-09-12",
-    duration: "100分鐘 (劇場版)",
+    date: "2025/12/20",
+    duration: "100分鐘",
     genre: "卡通、喜劇",
     version: "英語原音、國語配音",
     rating: "普遍級",
@@ -45,8 +45,8 @@ const movieData = {
   "3": {
     title: "小紅豆",
     img: "./img/M/小紅豆.png",
-    date: "1995-04-04 (日本首播)",
-    duration: "25分鐘/集",
+    date: "2026/01/29",
+    duration: "25分鐘",
     genre: "少女、校園、戀愛",
     version: "日語原音、國語配音",
     rating: "普遍級",
@@ -56,8 +56,8 @@ const movieData = {
   "4": {
     title: "北海小英雄",
     img: "./img/M/北海小英雄.png",
-    date: "1974-04-03 (日本首播)",
-    duration: "25分鐘/集",
+    date: "2026/02/03",
+    duration: "25分鐘",
     genre: "冒險、勵志、喜劇",
     version: "日語原音、國語配音",
     rating: "普遍級",
@@ -67,8 +67,8 @@ const movieData = {
   "5": {
     title: "頑皮豹",
     img: "./img/M/頑皮豹.png",
-    date: "1964-12-18 (首播)",
-    duration: "6-10分鐘/集",
+    date: "2026/02/17",
+    duration: "50分鐘",
     genre: "幽默、喜劇、無厘頭",
     version: "無對白 (純配樂)、英語原音",
     rating: "普遍級",
@@ -78,8 +78,8 @@ const movieData = {
   "6": {
     title: "原子小金剛",
     img: "./img/M/原子小金剛.png",
-    date: "1963-01-01 (首播)",
-    duration: "30分鐘/集",
+    date: "2026/02/27",
+    duration: "50分鐘",
     genre: "科幻、英雄、正義",
     version: "日語原音、國語配音",
     rating: "普遍級",
@@ -89,8 +89,8 @@ const movieData = {
   "7": {
     title: "鋼彈",
     img: "./img/M/鋼彈.png",
-    date: "1979-04-07 (首播)",
-    duration: "25分鐘/集",
+    date: "2026/03/10",
+    duration: "70分鐘",
     genre: "科幻、機甲、戰爭",
     version: "日語原音、粵語配音、國語配音",
     rating: "保護級",
@@ -100,8 +100,8 @@ const movieData = {
   "8": {
     title: "米老鼠",
     img: "./img/M/米奇.png",
-    date: "1928-11-18 (首次登場)",
-    duration: "8-15分鐘/集",
+    date: "2025/12/30",
+    duration: "15分鐘",
     genre: "卡通、經典、冒險",
     version: "英語原音、國語配音",
     rating: "普遍級",
