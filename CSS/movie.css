@@ -95,6 +95,12 @@ body.page-loaded .title {
     align-items: center;
     text-align: center;
   }
+
+  .modal-info h2 {
+        text-align: center;
+        width: 100%;
+        margin-top: 15px; /* 增加一點點與上方圖片的間距，比較美觀 */
+    }
 }
 
 @media (min-width: 1200px) {
