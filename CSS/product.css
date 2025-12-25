@@ -164,6 +164,7 @@ body.page-loaded .t4 {
 @media (max-width: 767px) {
   .product-row {
     gap: 36px 24px;
+    padding: 40px 16px 20px;
   }
 
   .product-card {
@@ -352,7 +353,7 @@ body.page-loaded .t4 {
   display: none;
   justify-content: center;
   /* 這裡的 40px 數字越小按鈕越往上 */
-  margin: 40px auto 60px;
+  margin: 20px auto 60px;
   padding: 0;
   transition: opacity 0.3s ease;
 }
