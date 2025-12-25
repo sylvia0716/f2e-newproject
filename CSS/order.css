@@ -110,23 +110,6 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
     object-fit: cover; /* 確保圖片填滿 */
 }
 
-.block_1 p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #E60000;
-    font-weight: 600;
-    text-align: center;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.85); /* 透明度 */
-    border-radius: 20px;
-    width: 90%;
-    font-size: 16px; /* 手機字體縮小 */
-    padding: 15px; 
-    line-height: 1.6;
-}
-
 .orderform {
     display: flex;
     flex-direction: column;
@@ -254,8 +237,32 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
 
 /* 預設全部隱藏 */
 .ticket_p {
-  display: none;
-  line-height: 1.8;
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #E60000;
+    font-weight: 600;
+    text-align: center;
+    z-index: 10;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    width: 90%;
+    padding: 15px;
+    line-height: 1.6;
+
+    /* 動畫初始狀態 */
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 30px));
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.ticket_p.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%); /* 回到原始位置 */
 }
 
 /* 手機 */
