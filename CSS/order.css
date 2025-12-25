@@ -311,3 +311,20 @@ body.page-loaded .t4 { animation-delay: 1.6s; }
 .orderform input:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.4);
 }
+
+.form-main-title {
+    text-align: center;      /* 文字置中 */
+    color: #FDFFE9;          /* 使用與標籤一樣的米白色 */
+    font-weight: 900;        /* 粗體 */
+    font-size: 28px;         /* 電腦版字體大小 */
+    margin-bottom: 30px;     /* 與下方第一個輸入框的間距 */
+    letter-spacing: 3px;     /* 字距拉開更有質感 */
+}
+
+/* 手機版 RWD 微調 */
+@media (max-width: 767px) {
+    .form-main-title {
+        font-size: 24px;     /* 手機版字稍微縮小 */
+        margin-bottom: 20px;
+    }
+}
